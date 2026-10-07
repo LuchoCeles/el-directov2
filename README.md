@@ -18,6 +18,8 @@ Configurá `NEXT_PUBLIC_SITE_URL` con la URL canónica. En producción debe coin
 - `/servicios`, `/cobertura`, `/empresa`, `/sucursales`, `/preguntas-frecuentes`, `/contacto`: información detallada y contacto.
 - `/envios-a-rosario`: envíos de Mar del Plata a Rosario.
 - `/envios-a-mar-del-plata`: envíos de Rosario a Mar del Plata.
+- `/terminos-y-condiciones`: información sobre el uso del sitio, las consultas y los aspectos a confirmar antes de contratar un envío.
+- `/privacidad`: tratamiento de los datos del formulario de contacto y ejercicio de derechos.
 - `/sitemap.xml` y `/robots.txt`: generados por Next.js.
 - `POST /api/contacto`: consulta del formulario con validación, honeypot y límite de envíos.
 

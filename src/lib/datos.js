@@ -63,6 +63,16 @@ export const metadatosPaginas = {
     descripcion: 'Consultá por encomiendas y cargas entre Rosario y Mar del Plata. Enviá los datos de tu carga o contactá nuestras sucursales para solicitar una cotización.',
     imagenAlt: `Contacto con ${empresa.nombre}`,
   },
+  'terminos-y-condiciones': {
+    titulo: `Términos y condiciones de uso del sitio | ${empresa.nombre}`,
+    descripcion: `Información sobre el uso del sitio, las consultas y la contratación de servicios de ${empresa.nombreCompleto}.`,
+    imagenAlt: `Términos y condiciones de ${empresa.nombre}`,
+  },
+  privacidad: {
+    titulo: `Política de privacidad | ${empresa.nombre}`,
+    descripcion: `Conocé qué datos recibe ${empresa.nombreCompleto} mediante el formulario de contacto y cómo ejercer tus derechos.`,
+    imagenAlt: `Política de privacidad de ${empresa.nombre}`,
+  },
 };
 
 export const sucursales = [

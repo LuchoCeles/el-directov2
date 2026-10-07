@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { esquemaFormularioContacto } from "@/lib/esquemas";
+import { esquemaFormularioContacto } from "@/lib/contacto/esquemaFormulario";
+import { fragmentosAutorizacionDatos } from "@/lib/contacto/avisoPrivacidad";
 
 interface DatosFormulario {
   nombre: string;
@@ -11,6 +13,7 @@ interface DatosFormulario {
   correo: string;
   telefono: string;
   mensaje: string;
+  autorizaTratamiento: boolean;
 }
 
 const datosIniciales: DatosFormulario = {
@@ -19,6 +22,7 @@ const datosIniciales: DatosFormulario = {
   correo: "",
   telefono: "",
   mensaje: "",
+  autorizaTratamiento: false,
 };
 
 const claseCampo = "min-h-12 w-full rounded-none border border-[#B6D0E5] bg-white px-4 py-3 text-sm text-[#154677] placeholder:text-[#748DA5] outline-none transition-colors hover:border-[#154677] focus-visible:border-[#087CE5] focus-visible:ring-2 focus-visible:ring-[#087CE5]/20 disabled:cursor-not-allowed disabled:bg-[#EAF2FA]";
@@ -28,7 +32,7 @@ const claseError = "mt-2 text-sm font-medium text-[#B42318]";
 export default function FormularioContacto() {
   const { toast } = useToast();
   const [datosFormulario, setDatosFormulario] = useState<DatosFormulario>(datosIniciales);
-  const [errores, setErrores] = useState<Partial<DatosFormulario>>({});
+  const [errores, setErrores] = useState<Partial<Record<keyof DatosFormulario, string>>>({});
   const [estaCargando, setEstaCargando] = useState(false);
   const [mielero, setMielero] = useState("");
 
@@ -48,7 +52,7 @@ export default function FormularioContacto() {
       return true;
     }
 
-    const erroresCampos: Partial<DatosFormulario> = {};
+    const erroresCampos: Partial<Record<keyof DatosFormulario, string>> = {};
     for (const problema of resultado.error.issues) {
       const campo = problema.path[0] as keyof DatosFormulario;
       if (!erroresCampos[campo]) erroresCampos[campo] = problema.message;
@@ -138,6 +142,38 @@ export default function FormularioContacto() {
           <textarea id="mensaje" name="mensaje" value={datosFormulario.mensaje} onChange={manejarCambio} placeholder="Indicá origen, destino, tipo de carga, medidas y peso aproximados..." rows={5} required disabled={estaCargando} aria-invalid={Boolean(errores.mensaje)} aria-describedby={errores.mensaje ? "error-mensaje" : undefined} className={`${claseCampo} min-h-36 resize-y`} />
           {errores.mensaje && <p id="error-mensaje" role="alert" className={claseError}>{errores.mensaje}</p>}
         </div>
+      </div>
+
+      <div className="mt-6">
+        <label htmlFor="autorizaTratamiento" className="flex cursor-pointer items-start gap-3 text-sm leading-6 text-[#154677]">
+          <input
+            id="autorizaTratamiento"
+            name="autorizaTratamiento"
+            type="checkbox"
+            checked={datosFormulario.autorizaTratamiento}
+            onChange={(evento) => {
+              setDatosFormulario((anterior) => ({ ...anterior, autorizaTratamiento: evento.target.checked }));
+              setErrores((anteriores) => ({ ...anteriores, autorizaTratamiento: undefined }));
+            }}
+            required
+            disabled={estaCargando}
+            aria-invalid={Boolean(errores.autorizaTratamiento)}
+            aria-describedby={errores.autorizaTratamiento ? "error-autorizaTratamiento" : undefined}
+            className="mt-1 h-4 w-4 shrink-0 accent-[#087CE5]"
+          />
+          <span>
+            {fragmentosAutorizacionDatos.inicio}
+            <Link href="/privacidad" className="font-semibold text-[#154677] underline decoration-[#087CE5] underline-offset-4 hover:text-[#087CE5]">
+              {fragmentosAutorizacionDatos.politica}
+            </Link>
+            {fragmentosAutorizacionDatos.entreEnlaces}
+            <Link href="/terminos-y-condiciones" className="font-semibold text-[#154677] underline decoration-[#087CE5] underline-offset-4 hover:text-[#087CE5]">
+              {fragmentosAutorizacionDatos.terminos}
+            </Link>
+            {fragmentosAutorizacionDatos.cierre} *
+          </span>
+        </label>
+        {errores.autorizaTratamiento && <p id="error-autorizaTratamiento" role="alert" className={claseError}>{errores.autorizaTratamiento}</p>}
       </div>
 
       <button type="submit" disabled={estaCargando} className="mt-7 inline-flex min-h-12 w-full items-center justify-center gap-2 bg-[#087CE5] px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-[#0969BF] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#087CE5] disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto">

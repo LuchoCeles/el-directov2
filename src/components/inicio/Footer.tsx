@@ -27,14 +27,14 @@ export default function Footer() {
                 El Directo <span className="block text-xs font-medium uppercase tracking-[0.16em] text-white/70">Transporte y logística</span>
               </span>
             </Link>
-            <p className="mt-6 max-w-xs text-sm leading-relaxed text-white/75">
-              Transporte de encomiendas y carga entre Rosario y Mar del Plata.
+            <p className="mt-6 max-w-sm text-sm leading-relaxed text-white/75">
+              Transportadore El Directo SRL conecta Rosario y Mar del Plata con transporte de encomiendas y cargas en ambos sentidos. También coordina retiros, entregas y redespachos según el destino.
             </p>
           </div>
 
           <nav aria-label="Navegación del pie de página">
             <h2 className="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-white/60">Explorá</h2>
-            <ul className="space-y-3 text-sm">
+            <ul className="space-y-1.5 text-sm">
               {navegacion.map((enlace) => (
                 <li key={enlace.destino}>
                   <Link href={enlace.destino} className="inline-flex min-h-8 items-center hover:text-[#9BD0FF] focus-visible:rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
@@ -90,6 +90,14 @@ export default function Footer() {
 
         <div className="flex flex-col gap-4 pt-7 text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} {empresa.nombreCompleto}. Todos los derechos reservados.</p>
+          <nav aria-label="Información legal" className="flex flex-wrap gap-x-5 gap-y-2">
+            <Link href="/terminos-y-condiciones" className="underline underline-offset-4 hover:text-[#9BD0FF] focus-visible:rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+              Términos y condiciones
+            </Link>
+            <Link href="/privacidad" className="underline underline-offset-4 hover:text-[#9BD0FF] focus-visible:rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+              Política de privacidad
+            </Link>
+          </nav>
           <p>
             Creada por{" "}
             <a href="https://logabyte.com.ar" target="_blank" rel="noopener noreferrer" className="text-white underline underline-offset-4 hover:text-[#9BD0FF] focus-visible:rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">

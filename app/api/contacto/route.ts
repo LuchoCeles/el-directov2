@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { estaDentroDelLimite, marcarEnvio } from "@/lib/limite-tasa";
-import { esquemaFormularioContacto } from "@/lib/esquemas";
+import { esquemaFormularioContacto } from "@/lib/contacto/esquemaFormulario";
+import { textoAutorizacionDatos } from "@/lib/contacto/avisoPrivacidad";
 import { clienteResend } from "@/lib/resend";
 import PlantillaConsulta from "@/components/emails/PlantillaConsulta";
 
@@ -62,6 +63,7 @@ export async function POST(req: NextRequest) {
   }
 
   const { nombre, empresa, correo, telefono, mensaje } = resultado.data;
+  const fechaRecepcionUtc = new Date().toISOString();
 
   const apiKey = process.env.RESEND_API_KEY;
   const fromEmail = process.env.RESEND_FROM_EMAIL;
@@ -86,6 +88,7 @@ export async function POST(req: NextRequest) {
       correo,
       telefono,
       mensaje,
+      fechaRecepcionUtc,
     }),
     text: `
 Nueva consulta desde el sitio web
@@ -95,6 +98,9 @@ ${empresa ? `Empresa: ${empresa}\n` : ""}Email: ${correo}
 ${telefono ? `Teléfono: ${telefono}\n` : ""}
 Mensaje:
 ${mensaje}
+
+Fecha de recepción (UTC): ${fechaRecepcionUtc}
+Declaración de autorización recibida: ${textoAutorizacionDatos}
       `.trim(),
   });
 

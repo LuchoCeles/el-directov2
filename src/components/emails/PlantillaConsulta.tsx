@@ -14,6 +14,7 @@ import {
 } from "@react-email/components";
 import type { CSSProperties } from "react";
 import { empresa, sucursales, urlSitio } from "@/lib/empresa";
+import { textoAutorizacionDatos } from "@/lib/contacto/avisoPrivacidad";
 
 const colorAzul = "#064079";
 const colorAzulClaro = "#0959AA";
@@ -29,6 +30,7 @@ interface PropsPlantillaConsulta {
   correo: string;
   telefono: string;
   mensaje: string;
+  fechaRecepcionUtc: string;
 }
 
 interface PropsFilaConsulta {
@@ -85,6 +87,7 @@ const PlantillaConsulta = ({
   correo,
   telefono,
   mensaje,
+  fechaRecepcionUtc,
 }: PropsPlantillaConsulta) => (
   <Html lang="es">
     <Preview>
@@ -155,6 +158,10 @@ const PlantillaConsulta = ({
               {mensaje}
             </Text>
           </Section>
+          <Hr style={estilosDivisor} />
+          <FilaConsulta etiqueta="Fecha de recepción (UTC)" valor={fechaRecepcionUtc} />
+          <Hr style={estilosDivisor} />
+          <FilaConsulta etiqueta="Declaración de autorización recibida" valor={textoAutorizacionDatos} />
         </Section>
 
         <Section style={estilosPie}>

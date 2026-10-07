@@ -22,6 +22,9 @@ export const esquemaFormularioContacto = z.object({
     .string()
     .min(1, "El mensaje es requerido")
     .max(2000, "El mensaje es demasiado largo"),
+  autorizaTratamiento: z
+    .boolean()
+    .refine((valor) => valor, "Debés autorizar el tratamiento de tus datos para enviar la consulta"),
 });
 
 export type DatosFormularioContacto = z.infer<typeof esquemaFormularioContacto>;
