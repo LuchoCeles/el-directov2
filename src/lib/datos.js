@@ -136,7 +136,7 @@ export const redespachosPorSucursal = [
   },
   {
     sucursal: sucursales[1],
-    destinos: ['Tandil', 'Balcarce', 'Miramar', 'Necochea'],
+    destinos: ['Tandil', 'Balcarce', 'Miramar', 'Necochea', 'Otamendi', 'Pinamar', 'Villa Gesell', 'Mar de Ajó', 'San Clemente del Tuyú'],
   },
 ];
 
