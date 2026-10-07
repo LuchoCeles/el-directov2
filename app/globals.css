@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 209 66% 17%;
+  --card: 0 0% 100%;
+  --card-foreground: 209 66% 17%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 209 66% 17%;
+  --primary: 210 69% 27%;
+  --primary-foreground: 0 0% 100%;
+  --primary-dark: 210 69% 21%;
+  --secondary: 210 57% 95%;
+  --secondary-foreground: 210 69% 27%;
+  --muted: 210 57% 95%;
+  --muted-foreground: 210 16% 39%;
+  --accent: 208 93% 46%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 70% 46%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 210 31% 88%;
+  --input: 210 31% 88%;
+  --ring: 208 93% 46%;
+  --transport-blue: 210 69% 27%;
+  --transport-blue-light: 208 93% 46%;
+  --transport-blue-subtle: 210 57% 95%;
+  --transport-navy: 209 66% 17%;
+  --transport-gray: 210 16% 39%;
+  --transport-gray-light: 210 20% 83%;
+  --transport-blue-dark: 210 69% 21%;
+  --transport-light: 210 57% 95%;
+  --whatsapp: 142 70% 42%;
+  --whatsapp-dark: 142 70% 32%;
+  --gradient-primary: linear-gradient(135deg, #154677, #087ce5);
+  --gradient-subtle: linear-gradient(180deg, #fff, #eaf2fa);
+  --shadow-elegant: 0 12px 30px -18px rgba(21, 70, 119, .35);
+  --shadow-card: 0 10px 35px -24px rgba(21, 70, 119, .32);
+  --radius: .5rem;
+}
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: #fff;
+    color: #173c5f;
+    font-family: var(--font-manrope), Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: #c5e4ff; color: #154677; }
+  :focus-visible { outline: 3px solid #087ce5; outline-offset: 3px; }
+  section[id] { scroll-margin-top: 100px; }
+}
+
+@layer components {
+  .section-shell { width: min(calc(100% - 2rem), 1260px); margin-inline: auto; }
+  .eyebrow { color: #087ce5; font-size: .7rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+}
+
+@media (min-width: 640px) {
+  .section-shell { width: min(calc(100% - 3rem), 1260px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
