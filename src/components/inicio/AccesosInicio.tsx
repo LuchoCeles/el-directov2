@@ -23,8 +23,12 @@ export default function AccesosInicio() {
               {sucursales.map((sucursal) => (
                 <article key={sucursal.nombre} className="border-t border-[#d2e0ed] pt-5">
                   <h4 className="font-heading text-xl text-[#154677]">{sucursal.nombre}</h4>
-                  <p id={sucursal.nombre === "Rosario" ? "horarios" : undefined} className="mt-3 text-sm leading-6 text-[#48647e]">Lunes a viernes, de {sucursal.horarios.semana.abre} a {sucursal.horarios.semana.cierra}. Sábados, de {sucursal.horarios.sabado.abre} a {sucursal.horarios.sabado.cierra}.</p>
-                  <p className="text-sm leading-6 text-[#48647e]">Domingos: {sucursal.horarios.domingo}. Feriados: {sucursal.horarios.feriados}.</p>
+                  <ul id={sucursal.nombre === "Rosario" ? "horarios" : undefined} className="mt-3 list-disc space-y-1 pl-5 text-sm leading-6 text-[#48647e]">
+                    <li>Lunes a viernes, de {sucursal.horarios.semana.abre} a {sucursal.horarios.semana.cierra}.</li>
+                    <li>Sábados, de {sucursal.horarios.sabado.abre} a {sucursal.horarios.sabado.cierra}.</li>
+                    <li>Domingos: {sucursal.horarios.domingo}.</li>
+                    <li>Feriados: {sucursal.horarios.feriados}.</li>
+                  </ul>
                 </article>
               ))}
             </div>
