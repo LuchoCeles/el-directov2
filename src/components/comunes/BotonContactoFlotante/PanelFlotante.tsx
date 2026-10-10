@@ -74,7 +74,7 @@ const PanelFlotante = ({
 
       <div className="px-5 pb-4 pt-1">
         <p className="text-xs text-gray-400 text-center">
-          Elegí una sucursal para continuar por WhatsApp.
+          Al elegir una sucursal se abrirá WhatsApp.
         </p>
       </div>
     </motion.div>

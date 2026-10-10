@@ -13,8 +13,8 @@ export default function Cobertura() {
         <div className="flex items-center px-5 py-16 sm:px-10 sm:py-20 lg:px-[clamp(3rem,6vw,8rem)]">
           <div className="max-w-[610px]">
             <p className="eyebrow">Destinos con redespacho</p>
-            <h2 id="titulo-cobertura" className="font-heading mt-5 text-4xl leading-[1.1] tracking-tight text-[#154677] sm:text-5xl">También coordinamos conexiones a otras localidades.</h2>
-            <p className="mt-6 text-base leading-8 text-[#3d5975]">Cada sucursal coordina redespachos hacia distintos destinos. Consultanos por disponibilidad, costo y plazo para tu envío.</p>
+            <h2 id="titulo-cobertura" className="font-heading mt-5 text-4xl leading-[1.1] tracking-tight text-[#154677] sm:text-5xl">¿Tu envío va a otra localidad?</h2>
+            <p className="mt-6 text-base leading-8 text-[#3d5975]">Desde nuestras sucursales podemos coordinar redespachos a los destinos que aparecen abajo. Escribinos para confirmar si hay disponibilidad y conocer el costo y el plazo de tu envío.</p>
             <div className="mt-8 space-y-8 border-t border-[#c7d9e9] pt-6">
               {redespachosPorSucursal.map(({ sucursal, destinos }) => (
                 <div key={sucursal.nombre}>

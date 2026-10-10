@@ -33,6 +33,7 @@ function construirEsquemaSucursal(sucursal) {
     "@type": "LocalBusiness",
     "@id": url,
     "name": `${empresa.nombreCompleto} - Sucursal ${sucursal.nombre}`,
+    "description": `La sucursal de ${sucursal.nombre} recibe consultas por envíos entre Rosario y Mar del Plata. Atiende de lunes a viernes de ${sucursal.horarios.semana.abre} a ${sucursal.horarios.semana.cierra} y los sábados de ${sucursal.horarios.sabado.abre} a ${sucursal.horarios.sabado.cierra}. Domingos: ${sucursal.horarios.domingo}. Feriados: ${sucursal.horarios.feriados}.`,
     "parentOrganization": { "@id": idEmpresa },
     "url": url,
     "address": {

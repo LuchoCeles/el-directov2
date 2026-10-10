@@ -17,7 +17,7 @@ export default function PaginaContacto() {
             <nav aria-label="Ruta de navegación" className="text-xs font-bold text-[#53708b]"><Link href="/" className="hover:text-[#087ce5]">Inicio</Link><span className="mx-2" aria-hidden="true">/</span>Contacto</nav>
             <p className="eyebrow mt-12">Contacto</p>
             <h1 className="font-heading mt-4 max-w-3xl text-[clamp(2.7rem,5vw,4.8rem)] leading-[1.08] tracking-tight text-[#154677]">Contacto y cotización de envíos</h1>
-            <p className="mt-6 max-w-2xl text-base leading-8 text-[#48647e] sm:text-lg">Consultá por encomiendas y cargas entre Rosario y Mar del Plata. Para cotizar, contanos qué enviás, las medidas y el peso aproximados, y las ciudades de origen y destino.</p>
+            <p className="mt-6 max-w-2xl text-base leading-8 text-[#48647e] sm:text-lg">¿Querés enviar una encomienda o una carga entre Rosario y Mar del Plata? Contanos qué necesitás transportar, sus medidas y peso aproximados, y las ciudades de origen y destino para que podamos orientarte con la cotización.</p>
           </div>
         </section>
         <Contacto />

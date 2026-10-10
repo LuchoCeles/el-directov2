@@ -11,7 +11,7 @@ export default function RutasDirectas() {
             <p className="eyebrow">Servicio directo</p>
             <h2 id="titulo-rutas-directas" className="mt-5 max-w-md font-heading text-3xl font-semibold leading-tight tracking-[-0.04em] sm:text-4xl">Envíos de Rosario a Mar del Plata y de Mar del Plata a Rosario</h2>
           </div>
-          <p className="max-w-xl self-end text-base leading-8 text-[#365572]">Transportamos carga entre Rosario y Mar del Plata sin transbordo entre nuestras sucursales. Los camiones salen los {itinerarioDirecto.diasSalida.join(" y ")} desde ambas ciudades; el arribo a la sucursal de destino está previsto {itinerarioDirecto.arriboPrevisto.referencia} a las {itinerarioDirecto.arriboPrevisto.hora}.</p>
+          <p className="max-w-xl self-end text-base leading-8 text-[#365572]">La carga viaja entre Rosario y Mar del Plata sin transbordo entre nuestras sucursales. Hay salidas los {itinerarioDirecto.diasSalida.join(" y ")} desde ambas ciudades. El arribo a la sucursal de destino está previsto {itinerarioDirecto.arriboPrevisto.referencia} a las {itinerarioDirecto.arriboPrevisto.hora}.</p>
         </div>
         <div className="mt-14 grid gap-8 md:grid-cols-2 lg:mt-20 lg:gap-16">
           {rutasDirectas.map((ruta, indice) => (

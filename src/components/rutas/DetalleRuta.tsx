@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
 import Footer from "@/components/inicio/Footer";
 import Header from "@/components/inicio/Header";
-import { redespachosPorSucursal, tiposDeCarga, type RutaDirecta, type Sucursal } from "@/lib/empresa";
+import { itinerarioDirecto, redespachosPorSucursal, tiposDeCarga, type RutaDirecta, type Sucursal } from "@/lib/empresa";
 import { obtenerEsquemaRuta } from "@/lib/seo/obtenerEsquemaRuta";
 
 interface PropiedadesDetalleRuta {
@@ -32,8 +32,9 @@ function DatosSucursal({ sucursal, etiqueta }: { sucursal: Sucursal; etiqueta: s
         {sucursal.direccion}
       </p>
       <div className="mt-5 pl-7 text-sm leading-7 text-[#365572]">
-        <p>Lunes a viernes: {sucursal.horarios.semana.abre} a {sucursal.horarios.semana.cierra}</p>
-        <p>Sábados: {sucursal.horarios.sabado.abre} a {sucursal.horarios.sabado.cierra}</p>
+        <p>Lunes a viernes, de {sucursal.horarios.semana.abre} a {sucursal.horarios.semana.cierra}</p>
+        <p>Sábados, de {sucursal.horarios.sabado.abre} a {sucursal.horarios.sabado.cierra}</p>
+        <p>Domingos: {sucursal.horarios.domingo}. Feriados: {sucursal.horarios.feriados}</p>
       </div>
       <div className="mt-5 flex flex-col gap-2 pl-7">
         {sucursal.telefono.map((telefono) => (
@@ -77,7 +78,7 @@ export default function DetalleRuta({ ruta, rutaOpuesta }: PropiedadesDetalleRut
               </nav>
               <p className="mb-5 text-xs font-bold uppercase tracking-[0.22em] text-[#087CE5]">Transporte directo entre sucursales</p>
               <h1 className="max-w-2xl font-heading text-[clamp(2.45rem,5vw,4.8rem)] font-semibold leading-[1.09] tracking-[-0.055em] text-[#154677]">{ruta.titulo}</h1>
-              <p className="mt-7 max-w-xl text-base leading-8 text-[#365572] sm:text-lg">{ruta.descripcionSeo}</p>
+              <p className="mt-7 max-w-xl text-base leading-8 text-[#365572] sm:text-lg">{ruta.descripcion} Las salidas son los {itinerarioDirecto.diasSalida.join(" y ")}, con arribo previsto a la sucursal de destino {itinerarioDirecto.arriboPrevisto.referencia} a las {itinerarioDirecto.arriboPrevisto.hora}.</p>
               <div className="mt-9 flex flex-wrap items-center gap-x-7 gap-y-5">
                 <Link href="/contacto" className="inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-[#087CE5] px-7 py-3 text-sm font-bold text-white transition-colors hover:bg-[#154677] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#087CE5]">
                   Cotizar un envío <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
@@ -98,20 +99,20 @@ export default function DetalleRuta({ ruta, rutaOpuesta }: PropiedadesDetalleRut
             <div>
               <p className="mb-5 text-xs font-bold uppercase tracking-[0.2em] text-[#087CE5]">Tu envío, paso a paso</p>
               <h2 id="como-enviar" className="max-w-lg font-heading text-3xl font-semibold leading-tight tracking-[-0.04em] text-[#154677] sm:text-4xl">Cómo enviar una encomienda o carga a {ruta.destino.nombre}</h2>
-              <p className="mt-6 max-w-lg text-base leading-8 text-[#365572]">Podés despachar en la sucursal de origen y retirar en la de destino. Para retiro o entrega a domicilio, indicá las direcciones al pedir el presupuesto.</p>
+              <p className="mt-6 max-w-lg text-base leading-8 text-[#365572]">Podés llevar tu carga a nuestra sucursal de {ruta.origen.nombre} y retirarla en {ruta.destino.nombre}. Si preferís que la retiremos o la entreguemos a domicilio, pasanos las direcciones para consultar la disponibilidad.</p>
             </div>
             <ol className="border-t border-[#154677]/20">
               <li className="grid grid-cols-[3rem_1fr] gap-3 border-b border-[#154677]/20 py-7 sm:grid-cols-[4rem_1fr]">
                 <span className="pt-1 text-sm font-bold text-[#087CE5]">01</span>
-                <div><h3 className="text-lg font-semibold text-[#154677]">Contanos qué necesitás transportar</h3><p className="mt-2 text-sm leading-7 text-[#365572]">Indicá qué enviás, sus medidas y peso aproximados, el origen y el destino para recibir una cotización.</p></div>
+                <div><h3 className="text-lg font-semibold text-[#154677]">Contanos qué vas a enviar</h3><p className="mt-2 text-sm leading-7 text-[#365572]">Decinos qué es, cuánto mide y pesa aproximadamente, y entre qué direcciones tiene que viajar. Con esos datos podemos cotizarlo.</p></div>
               </li>
               <li className="grid grid-cols-[3rem_1fr] gap-3 border-b border-[#154677]/20 py-7 sm:grid-cols-[4rem_1fr]">
                 <span className="pt-1 text-sm font-bold text-[#087CE5]">02</span>
-                <div><h3 className="text-lg font-semibold text-[#154677]">Coordiná el despacho</h3><p className="mt-2 text-sm leading-7 text-[#365572]">Podés acercar la carga a {ruta.origen.direccion}. Si necesitás retiro a domicilio, consultá la disponibilidad.</p></div>
+                <div><h3 className="text-lg font-semibold text-[#154677]">Coordiná el despacho</h3><p className="mt-2 text-sm leading-7 text-[#365572]">Podés acercar la carga a {ruta.origen.direccion}. Si necesitás que la busquemos, consultanos si hay retiro disponible en tu domicilio.</p></div>
               </li>
               <li className="grid grid-cols-[3rem_1fr] gap-3 border-b border-[#154677]/20 py-7 sm:grid-cols-[4rem_1fr]">
                 <span className="pt-1 text-sm font-bold text-[#087CE5]">03</span>
-                <div><h3 className="text-lg font-semibold text-[#154677]">Definí la recepción</h3><p className="mt-2 text-sm leading-7 text-[#365572]">Retirá en la sucursal de {ruta.destino.nombre} o consultá por entrega a domicilio según tu dirección y tipo de carga.</p></div>
+                <div><h3 className="text-lg font-semibold text-[#154677]">Elegí cómo recibirla</h3><p className="mt-2 text-sm leading-7 text-[#365572]">Podés retirarla en nuestra sucursal de {ruta.destino.nombre}. Si preferís recibirla en tu domicilio, consultanos si podemos entregarla allí.</p></div>
               </li>
             </ol>
           </div>
@@ -122,7 +123,7 @@ export default function DetalleRuta({ ruta, rutaOpuesta }: PropiedadesDetalleRut
             <div className="mb-11 max-w-2xl">
               <p className="mb-5 text-xs font-bold uppercase tracking-[0.2em] text-[#087CE5]">Atención en ambos extremos</p>
               <h2 id="sucursales-trayecto" className="font-heading text-3xl font-semibold tracking-[-0.04em] text-[#154677] sm:text-4xl">Sucursales del trayecto</h2>
-              <p className="mt-5 text-base leading-8 text-[#365572]">Contactá directamente a la sucursal de origen o destino para organizar tu envío.</p>
+              <p className="mt-5 text-base leading-8 text-[#365572]">Acá tenés las direcciones, los horarios y los datos de contacto de las dos sucursales para organizar tu envío.</p>
             </div>
             <div className="grid gap-12 md:grid-cols-2 md:gap-16">
               <DatosSucursal etiqueta="Origen" sucursal={ruta.origen} />
@@ -140,7 +141,7 @@ export default function DetalleRuta({ ruta, rutaOpuesta }: PropiedadesDetalleRut
                   Redespachos desde {ruta.destino.nombre}
                 </h2>
                 <p className="mt-5 text-base leading-8 text-[#365572]">
-                  Estas localidades tienen opciones de conexión desde la sucursal de {ruta.destino.nombre}. El redespacho requiere confirmar disponibilidad, costo y plazo para cada envío.
+                  Si tu carga sigue viaje desde {ruta.destino.nombre}, consultanos por una conexión a estas localidades. Antes de coordinar el redespacho, confirmaremos la disponibilidad, el costo y el plazo para tu envío.
                 </p>
               </div>
               <ul className="mt-10 grid gap-x-8 gap-y-3 border-t border-[#154677]/20 pt-7 sm:grid-cols-2 lg:grid-cols-3" aria-label={`Destinos de redespacho desde ${ruta.destino.nombre}`}>
@@ -162,7 +163,7 @@ export default function DetalleRuta({ ruta, rutaOpuesta }: PropiedadesDetalleRut
           <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[minmax(0,0.7fr)_minmax(0,1.3fr)] lg:gap-24">
             <h2 id="tipos-carga-ruta" className="font-heading text-3xl font-semibold tracking-[-0.04em] text-[#154677] sm:text-4xl">Qué podés enviar en esta ruta</h2>
             <div>
-              <p className="text-base leading-8 text-[#365572]">Recibimos distintos tipos de carga. Consultá las condiciones de preparación y traslado, especialmente si el objeto es grande o frágil.</p>
+              <p className="text-base leading-8 text-[#365572]">Llevamos encomiendas, mercadería y otros tipos de carga en este trayecto. Si tu envío es grande o frágil, consultanos antes de despacharlo para saber cómo prepararlo.</p>
               <ul className="mt-6 grid gap-x-8 gap-y-3 sm:grid-cols-2">
                 {tiposDeCarga.map((tipo) => (
                   <li key={tipo} className="border-t border-[#154677]/20 pt-3 text-sm leading-7 text-[#365572]">{tipo}</li>
@@ -185,7 +186,7 @@ export default function DetalleRuta({ ruta, rutaOpuesta }: PropiedadesDetalleRut
             <div>
               <p className="mb-5 text-xs font-bold uppercase tracking-[0.2em] text-[#087CE5]">Hablemos de tu envío</p>
               <h2 id="consultar-envio" className="max-w-2xl font-heading text-3xl font-semibold leading-tight tracking-[-0.04em] sm:text-4xl">Contanos qué necesitás enviar a {ruta.destino.nombre}.</h2>
-              <p className="mt-5 max-w-xl text-base leading-8 text-[#365572]">Te ayudamos a coordinar la carga, el despacho y la recepción.</p>
+              <p className="mt-5 max-w-xl text-base leading-8 text-[#365572]">Con el tamaño y peso aproximados, y las direcciones de origen y destino, podemos orientarte y preparar una cotización.</p>
             </div>
             <Link href="/contacto" className="inline-flex min-h-12 shrink-0 items-center justify-center gap-3 self-start rounded-full bg-[#087CE5] px-7 py-3 text-sm font-bold text-white transition-colors hover:bg-[#154677] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#087CE5]">
               Solicitar cotización <ArrowUpRight className="h-4 w-4" aria-hidden="true" />

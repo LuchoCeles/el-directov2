@@ -9,9 +9,9 @@ import IconoWhatsapp from "@/components/inicio/IconoWhatsapp";
 import type { PropiedadesBotonContactoFlotante } from "./tipos";
 
 const BotonContactoFlotante = ({
-  titulo = "Comenzar una conversación",
-  subtitulo = "Seleccioná una sucursal para chatear con nosotros.",
-  mensajeDefecto = "Hola, me gustaría recibir información sobre sus servicios de transporte.",
+  titulo = "¿En qué podemos ayudarte?",
+  subtitulo = "Elegí la sucursal con la que querés hablar por WhatsApp.",
+  mensajeDefecto = "Hola, quisiera consultar por un envío. ¿Me pueden ayudar?",
   contactos,
   color = "#25D366",
   posicion = { inferior: 24, derecha: 24 },

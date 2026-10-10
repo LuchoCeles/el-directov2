@@ -24,10 +24,10 @@ export default function PaginaCobertura() {
               </nav>
               <p className="eyebrow">Rutas y destinos</p>
               <h1 id="titulo-pagina-cobertura" className="mt-5 max-w-2xl font-heading text-[clamp(2.5rem,5.5vw,5.2rem)] font-semibold leading-[1.07] tracking-[-0.055em]">
-                Cobertura de envíos entre Rosario y Mar del Plata.
+                Enviá entre Rosario y Mar del Plata
               </h1>
               <p className="mt-7 max-w-xl text-base leading-8 text-[#365572] sm:text-lg">
-                {empresa.nombreCompleto} une sus sucursales de {ciudadesDirecto.join(" y ")} en ambos sentidos. Desde cada una se pueden coordinar redespachos a las localidades indicadas más abajo, previa confirmación.
+                {empresa.nombreCompleto} lleva encomiendas y cargas entre {ciudadesDirecto.join(" y ")} en ambos sentidos. Si tu destino es otra localidad, consultanos por las conexiones disponibles desde nuestras sucursales.
               </p>
               <Link href="#rutas-directas" className="mt-9 inline-flex min-h-12 w-fit items-center gap-2 border-b border-[#087CE5] text-sm font-bold underline-offset-4 hover:text-[#087CE5] focus-visible:text-[#087CE5]">
                 Explorar rutas <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -48,13 +48,14 @@ export default function PaginaCobertura() {
         <section className="bg-[#EAF2FA] px-5 py-20 text-[#154677] sm:px-10 lg:py-24" aria-labelledby="titulo-sucursales-cobertura">
           <div className="mx-auto max-w-6xl">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#087CE5]">Puntos de atención</p>
-            <h2 id="titulo-sucursales-cobertura" className="mt-5 font-heading text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">Dónde despachar o retirar tu carga</h2>
+            <h2 id="titulo-sucursales-cobertura" className="mt-5 font-heading text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">Dónde llevar o retirar tu carga</h2>
             <div className="mt-12 grid gap-10 md:grid-cols-2 md:gap-16">
               {sucursales.map((sucursal) => (
                 <address key={sucursal.nombre} className="border-t border-[#C9DCEB] pt-6 not-italic">
                   <h3 className="font-heading text-2xl font-semibold">{sucursal.nombre}</h3>
                   <p className="mt-3 text-sm leading-7 text-[#365572]">{sucursal.direccion}</p>
-                  <p className="mt-1 text-sm leading-7 text-[#365572]">Lunes a viernes: {sucursal.horarios.semana.abre} a {sucursal.horarios.semana.cierra}. Sábados: {sucursal.horarios.sabado.abre} a {sucursal.horarios.sabado.cierra}.</p>
+                  <p className="mt-1 text-sm leading-7 text-[#365572]">Lunes a viernes, de {sucursal.horarios.semana.abre} a {sucursal.horarios.semana.cierra}. Sábados, de {sucursal.horarios.sabado.abre} a {sucursal.horarios.sabado.cierra}.</p>
+                  <p className="text-sm leading-7 text-[#365572]">Domingos: {sucursal.horarios.domingo}. Feriados: {sucursal.horarios.feriados}.</p>
                   <a href={`tel:${sucursal.telefono[0].replace(/\D/g, "")}`} className="mt-4 inline-flex min-h-11 items-center text-sm font-bold text-[#154677] underline underline-offset-4 hover:text-[#087CE5]">{sucursal.telefono[0]}</a>
                 </address>
               ))}

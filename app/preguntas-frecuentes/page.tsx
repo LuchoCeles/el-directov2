@@ -45,8 +45,9 @@ export default function PaginaPreguntasFrecuentes() {
                 </h1>
               </div>
               <p className="max-w-lg text-base leading-8 text-[#365572] sm:text-lg">
-                Encontrá respuestas sobre embalaje, retiro, entrega,
-                redespachos, precios y seguro de carga.
+                Reunimos las dudas más comunes sobre cómo preparar la carga,
+                cotizar un envío y coordinar el retiro, la entrega o un
+                redespacho.
               </p>
             </div>
           </div>
@@ -65,10 +66,11 @@ export default function PaginaPreguntasFrecuentes() {
                 id="respuestas-preguntas"
                 className="font-heading text-2xl font-semibold leading-tight tracking-[-0.04em] sm:text-3xl"
               >
-                Resolvé tus dudas antes de despachar
+                Lo que conviene saber antes de despachar
               </h2>
               <p className="mt-5 max-w-sm text-sm leading-7 text-[#42617F]">
-                Seleccioná una pregunta para leer la respuesta.
+                Abrí la pregunta que te interese para ver la respuesta. Si
+                necesitás algo más específico, podés escribirnos.
               </p>
             </div>
             <div className="border-t border-[#C9DCEB]">
@@ -78,8 +80,8 @@ export default function PaginaPreguntasFrecuentes() {
                   className="group border-b border-[#C9DCEB]"
                   open={indice === 0}
                 >
-                  <summary className="flex min-h-20 cursor-pointer list-none items-center justify-between gap-5 py-5 text-left marker:hidden [&::-webkit-details-marker]:hidden">
-                    <span className="font-heading text-lg font-semibold leading-snug group-hover:text-[#087CE5] sm:text-xl">
+                  <summary className="flex min-h-20 cursor-pointer list-none items-center justify-between gap-5 py-5 text-left transition-colors hover:text-[#087CE5] marker:hidden [&::-webkit-details-marker]:hidden">
+                    <span className="font-heading text-lg font-semibold leading-snug sm:text-xl">
                       {elemento.pregunta}
                     </span>
                     <Plus
@@ -109,11 +111,12 @@ export default function PaginaPreguntasFrecuentes() {
                 id="consulta-personalizada"
                 className="max-w-2xl font-heading text-3xl font-semibold leading-tight tracking-[-0.04em] sm:text-4xl"
               >
-                ¿Tu consulta necesita una respuesta más precisa?
+                ¿Tenés una consulta sobre tu envío?
               </h2>
               <p className="mt-5 max-w-xl text-base leading-8 text-[#365572]">
-                Compartí los datos de la carga, el origen y el destino para que
-                podamos orientarte.
+                Contanos qué querés enviar, desde dónde y hacia dónde. Si
+                conocés las medidas y el peso aproximados, sumalos para que
+                podamos orientarte mejor.
               </p>
             </div>
             <Link

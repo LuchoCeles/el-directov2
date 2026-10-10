@@ -28,7 +28,7 @@ const TarjetaContacto = ({ sucursal, numero, mensaje, indice }: PropiedadesTarje
         "flex items-center gap-3 w-full p-3 rounded-xl",
         "cursor-pointer transition-colors"
       )}
-      aria-label={`Chatear con sucursal ${sucursal}`}
+      aria-label={`Chatear con la sucursal de ${sucursal}`}
     >
       <div className="w-10 h-10 rounded-full bg-[#25D366] flex items-center justify-center flex-shrink-0">
         <IconoWhatsapp className="w-5 h-5 text-white" />

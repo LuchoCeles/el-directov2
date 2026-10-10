@@ -17,12 +17,11 @@ const Servicios = () => {
               id="titulo-servicios"
               className="font-heading max-w-lg text-4xl leading-[1.08] tracking-tight text-[#154677] sm:text-5xl lg:text-6xl"
             >
-              Cada carga tiene su recorrido.
+              Contanos qué necesitás transportar
             </h2>
           </div>
           <p className="max-w-2xl self-end text-base leading-7 text-[#154677]/80 sm:text-lg sm:leading-8">
-            Transportamos encomiendas y carga de distintos tamaños. Contanos qué
-            necesitás enviar para coordinar el despacho, el retiro o la entrega.
+            Desde un paquete hasta muebles o mercadería para tu negocio, cada envío necesita una preparación distinta. Consultanos por el despacho y, si lo necesitás, por retiro o entrega a domicilio.
           </p>
         </div>
 

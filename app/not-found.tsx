@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Truck } from "lucide-react";
 
-export default function NotFound() {
+export default function PaginaNoEncontrada() {
   return (
     <div id="page-not-found" className="min-h-screen flex flex-col items-center justify-center bg-gradient-subtle px-4">
       <div className="w-24 h-24 bg-gradient-primary rounded-full flex items-center justify-center mb-8 shadow-elegant">
@@ -9,12 +9,12 @@ export default function NotFound() {
       </div>
       <h1 className="text-8xl font-bold text-primary mb-4">404</h1>
       <h2 className="text-2xl font-semibold text-foreground mb-2">
-        Ruta no encontrada
+        No encontramos esta página
       </h2>
       <p className="text-muted-foreground text-center max-w-md mb-8">
-        Parece que esta carga se perdió en el camino.
-        <br />
-        Volvé al inicio para encontrar lo que buscás.
+        El enlace que abriste puede haber cambiado o la dirección puede estar
+        incompleta. Desde el inicio podés encontrar nuestros servicios,
+        sucursales y formas de contacto.
       </p>
       <Link
         href="/"

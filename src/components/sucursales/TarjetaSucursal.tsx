@@ -72,7 +72,7 @@ export default function TarjetaSucursal({
           <div className="mt-7 border-t border-[#C9DCEB] pt-7">
             <p className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-[#42617F]">
               <Clock3 className="h-4 w-4 text-[#087CE5]" aria-hidden="true" />
-              Horario de atención
+              Horarios de atención al público
             </p>
             <dl className="grid grid-cols-[auto_1fr] gap-x-5 gap-y-1 text-sm leading-7">
               <dt>Lunes a viernes</dt>
@@ -85,6 +85,10 @@ export default function TarjetaSucursal({
                 {sucursal.horarios.sabado.abre} a{" "}
                 {sucursal.horarios.sabado.cierra}
               </dd>
+              <dt>Domingos</dt>
+              <dd className="font-semibold">{sucursal.horarios.domingo}</dd>
+              <dt>Feriados</dt>
+              <dd className="font-semibold">{sucursal.horarios.feriados}</dd>
             </dl>
           </div>
           <p className="mt-7 text-sm text-[#42617F]">

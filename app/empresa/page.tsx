@@ -44,7 +44,7 @@ export default function PaginaEmpresa() {
                 id="titulo-empresa"
                 className="max-w-2xl font-heading text-[clamp(2.7rem,5vw,5rem)] font-semibold leading-[1.08] tracking-[-0.055em]"
               >
-                Transporte El Directo desde {empresa.añoFundacion}
+                Conectamos Rosario y Mar del Plata desde {empresa.añoFundacion}
               </h1>
               <p className="mt-7 max-w-xl text-base leading-8 text-[#365572] sm:text-lg">
                 {empresa.descripcion}
@@ -77,13 +77,13 @@ export default function PaginaEmpresa() {
           <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
             <div>
               <p className="mb-5 text-xs font-bold uppercase tracking-[0.2em] text-[#087CE5]">
-                Nuestra empresa
+                Sobre nosotros
               </p>
               <h2
                 id="quienes-somos"
                 className="font-heading text-3xl font-semibold leading-tight tracking-[-0.04em] sm:text-4xl"
               >
-                Quiénes somos y a quiénes atendemos
+                Transporte para personas, comercios y empresas
               </h2>
             </div>
             <div className="border-t border-[#C9DCEB] pt-7">
@@ -107,7 +107,7 @@ export default function PaginaEmpresa() {
                 id="como-trabajamos"
                 className="font-heading text-3xl font-semibold tracking-[-0.04em] sm:text-4xl"
               >
-                Cómo organizamos cada traslado
+                Nos ocupamos de cada traslado según lo que necesitás enviar
               </h2>
               <p className="mt-6 text-base leading-8 text-[#365572]">
                 {empresa.queHacemos}
@@ -117,11 +117,11 @@ export default function PaginaEmpresa() {
               <article className="bg-white p-7 sm:p-9">
                 <Truck className="h-8 w-8 text-[#087CE5]" aria-hidden="true" />
                 <h3 className="mt-6 font-heading text-xl font-semibold">
-                  Entre dos ciudades
+                  Un viaje directo entre sucursales
                 </h3>
                 <p className="mt-3 text-sm leading-7 text-[#42617F]">
-                  Transporte directo entre nuestras sucursales de Rosario y Mar
-                  del Plata, sin transbordo entre ellas.
+                  Tu carga viaja entre Rosario y Mar del Plata sin transbordo
+                  entre nuestras sucursales.
                 </p>
               </article>
               <article className="bg-white p-7 sm:p-9">
@@ -130,21 +130,21 @@ export default function PaginaEmpresa() {
                   aria-hidden="true"
                 />
                 <h3 className="mt-6 font-heading text-xl font-semibold">
-                  Para distintas cargas
+                  Cargas de distintos tamaños
                 </h3>
                 <p className="mt-3 text-sm leading-7 text-[#42617F]">
-                  Encomiendas, carga general y otros traslados que organizamos
-                  según sus características.
+                  Llevamos encomiendas y carga general de distintos tamaños.
+                  Organizamos el traslado según las características de tu envío.
                 </p>
               </article>
               <article className="bg-white p-7 sm:p-9">
                 <MapPin className="h-8 w-8 text-[#087CE5]" aria-hidden="true" />
                 <h3 className="mt-6 font-heading text-xl font-semibold">
-                  Más posibilidades
+                  Opciones para llegar más lejos
                 </h3>
                 <p className="mt-3 text-sm leading-7 text-[#42617F]">
-                  Consultá por retiro, entrega a domicilio y redespacho de
-                  acuerdo con el origen y el destino.
+                  Si necesitás retiro, entrega a domicilio o redespacho,
+                  consultanos qué opciones hay para tu origen y destino.
                 </p>
               </article>
             </div>
@@ -164,7 +164,7 @@ export default function PaginaEmpresa() {
                 id="donde-estamos"
                 className="font-heading text-3xl font-semibold tracking-[-0.04em] sm:text-4xl"
               >
-                Atención en Rosario y Mar del Plata
+                Podés acercarte a Rosario o Mar del Plata
               </h2>
               <Link
                 href="/sucursales"

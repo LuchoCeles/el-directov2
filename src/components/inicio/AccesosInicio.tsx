@@ -9,9 +9,9 @@ export default function AccesosInicio() {
         <div className="grid gap-8 border-b border-[#d2e0ed] pb-10 lg:grid-cols-2 lg:items-end">
           <div>
             <p className="eyebrow">Información para tu envío</p>
-            <h2 className="font-heading mt-4 max-w-2xl text-4xl leading-[1.1] tracking-tight text-[#154677] sm:text-5xl">Planificá tu despacho.</h2>
+            <h2 className="font-heading mt-4 max-w-2xl text-4xl leading-[1.1] tracking-tight text-[#154677] sm:text-5xl">Antes de enviar, encontrá lo que necesitás saber</h2>
           </div>
-          <p className="max-w-xl text-base leading-8 text-[#48647e]">Consultá nuestros puntos de atención, horarios y respuestas antes de preparar tu carga.</p>
+          <p className="max-w-xl text-base leading-8 text-[#48647e]">Acá tenés los horarios de las sucursales y las respuestas a las consultas más comunes. Si necesitás ayuda con tu carga, también podés escribirnos.</p>
         </div>
         <div className="grid gap-12 py-10 lg:grid-cols-[1.3fr_.7fr] lg:gap-20 lg:py-14">
           <div id="sucursales">
@@ -23,7 +23,8 @@ export default function AccesosInicio() {
               {sucursales.map((sucursal) => (
                 <article key={sucursal.nombre} className="border-t border-[#d2e0ed] pt-5">
                   <h4 className="font-heading text-xl text-[#154677]">{sucursal.nombre}</h4>
-                  <p id={sucursal.nombre === "Rosario" ? "horarios" : undefined} className="mt-3 text-xs leading-5 text-[#48647e]">Lun. a vie. {sucursal.horarios.semana.abre}–{sucursal.horarios.semana.cierra} · Sáb. {sucursal.horarios.sabado.abre}–{sucursal.horarios.sabado.cierra}</p>
+                  <p id={sucursal.nombre === "Rosario" ? "horarios" : undefined} className="mt-3 text-sm leading-6 text-[#48647e]">Lunes a viernes, de {sucursal.horarios.semana.abre} a {sucursal.horarios.semana.cierra}. Sábados, de {sucursal.horarios.sabado.abre} a {sucursal.horarios.sabado.cierra}.</p>
+                  <p className="text-sm leading-6 text-[#48647e]">Domingos: {sucursal.horarios.domingo}. Feriados: {sucursal.horarios.feriados}.</p>
                 </article>
               ))}
             </div>

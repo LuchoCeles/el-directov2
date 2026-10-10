@@ -18,6 +18,8 @@ import {
 export interface HorarioSucursal {
   semana: { abre: string; cierra: string };
   sabado: { abre: string; cierra: string };
+  domingo: string;
+  feriados: string;
 }
 
 export interface Coordenadas {

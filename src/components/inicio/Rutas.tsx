@@ -18,11 +18,10 @@ const Rutas = () => {
             id="titulo-rutas"
             className="font-heading max-w-xl text-4xl leading-[1.08] tracking-tight text-[#154677] sm:text-5xl lg:text-6xl"
           >
-            Elegí el sentido de tu envío.
+            ¿Desde dónde necesitás enviar?
           </h2>
           <p className="mt-7 max-w-lg text-base leading-7 text-[#154677]/80 sm:text-lg sm:leading-8">
-            Conocé cómo despachar y recibir carga en cada trayecto. El retiro
-            y la entrega a domicilio se coordinan según cada envío.
+            Hacemos viajes directos entre Rosario y Mar del Plata en ambos sentidos. Elegí tu trayecto para ver dónde despachar y retirar. Si necesitás retiro o entrega a domicilio, consultanos la disponibilidad.
           </p>
         </div>
 

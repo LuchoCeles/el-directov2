@@ -53,8 +53,9 @@ export default function PaginaSucursales() {
                 </h1>
               </div>
               <p className="max-w-lg text-base leading-8 text-[#365572] sm:text-lg">
-                Encontrá direcciones, horarios y medios de contacto para
-                despachar o retirar encomiendas y cargas en cada ciudad.
+                Si querés despachar o retirar una encomienda o una carga,
+                acá tenés la dirección, los horarios y las formas de contacto
+                de cada sucursal.
               </p>
             </div>
             <div className="mt-10 flex flex-wrap gap-3">
@@ -93,16 +94,18 @@ export default function PaginaSucursales() {
           <div className="mx-auto flex max-w-6xl flex-col gap-8 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="mb-5 text-xs font-bold uppercase tracking-[0.2em] text-[#087CE5]">
-                Tu envío
+                Antes de enviar
               </p>
               <h2
                 id="titulo-contacto-sucursales"
                 className="max-w-2xl font-heading text-3xl font-semibold leading-tight tracking-[-0.04em] sm:text-4xl"
               >
-                ¿Necesitás cotizar una carga?
+                ¿Querés saber cuánto cuesta tu envío?
               </h2>
               <p className="mt-5 max-w-xl text-base leading-8 text-[#365572]">
-                Contanos qué necesitás transportar, desde dónde y hacia dónde.
+                Contanos qué vas a transportar, su tamaño aproximado y desde
+                dónde hasta dónde tiene que viajar. Con esos datos podemos
+                orientarte sobre la cotización.
               </p>
             </div>
             <Link

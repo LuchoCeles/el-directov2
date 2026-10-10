@@ -17,7 +17,10 @@ export default function ContenidoPrivacidad() {
             Política de privacidad
           </h1>
           <p className="mt-6 text-base leading-8 text-[#42617F] sm:text-lg">
-            Si nos escribís mediante el formulario de contacto, usamos los datos que nos das para gestionar y responder tu consulta. Acá te explicamos qué información recibimos, quién interviene en el envío y cómo podés ejercer tus derechos.
+            Cuando nos escribís desde el formulario, usamos los datos que nos
+            compartís para gestionar tu consulta y responderte. Acá te
+            contamos qué información recibimos, quién puede acceder a ella y
+            cómo podés ejercer tus derechos.
           </p>
         </div>
 
@@ -31,36 +34,36 @@ export default function ContenidoPrivacidad() {
                 <li key={sucursal.nombre}>{sucursal.direccion}</li>
               ))}
             </ul>
-            <Link href="/sucursales" className="mt-4 inline-block font-semibold text-[#087CE5] underline underline-offset-4">Ver todos los contactos</Link>
+            <Link href="/sucursales" className="mt-4 inline-block font-semibold text-[#087CE5] underline underline-offset-4">Ver teléfonos y horarios</Link>
           </aside>
 
           <div className="space-y-11 text-base leading-8 text-[#365572]">
             <section aria-labelledby="datos-recibidos">
               <h2 id="datos-recibidos" className="font-heading text-2xl font-semibold text-[#154677]">1. Datos que recibimos</h2>
-              <p className="mt-4">El formulario solicita nombre, correo electrónico y mensaje como datos obligatorios. El nombre de la empresa y el teléfono son opcionales. Las consultas recibidas quedan en las casillas de correo de la empresa, que forman su archivo electrónico de consultas. También recibimos la dirección IP desde la que se envía la consulta para limitar los envíos repetidos y proteger el formulario frente a usos abusivos.</p>
-              <p className="mt-3">No incluyas en el mensaje contraseñas, datos bancarios ni información sensible. Para orientarte sobre un envío basta con describir la carga, el origen y el destino.</p>
+              <p className="mt-4">Para enviar el formulario, te pedimos nombre, correo electrónico y un mensaje. Podés agregar el nombre de tu empresa y un teléfono si querés. Las consultas llegan a las casillas de correo de la empresa y quedan en nuestro archivo electrónico de consultas. También recibimos la dirección IP desde la que enviás el formulario para limitar mensajes repetidos y protegerlo frente a usos abusivos.</p>
+              <p className="mt-3">No incluyas contraseñas, datos bancarios ni información sensible en el mensaje. Para orientarte sobre un envío, alcanza con que nos cuentes qué querés transportar, desde dónde y hacia dónde.</p>
             </section>
 
             <section aria-labelledby="finalidad-datos">
               <h2 id="finalidad-datos" className="font-heading text-2xl font-semibold text-[#154677]">2. Para qué usamos los datos</h2>
-              <p className="mt-4">Usamos los datos del formulario para recibir tu solicitud, evaluar lo que necesitás y responderte por los medios de contacto que nos indiques. La IP se emplea en un registro temporal en memoria que impide más de un envío exitoso cada cinco minutos desde la misma dirección.</p>
+              <p className="mt-4">Usamos los datos del formulario para entender tu solicitud y responderte por los medios de contacto que nos indiques. La dirección IP se guarda temporalmente en memoria para impedir más de un envío exitoso cada cinco minutos desde la misma dirección.</p>
             </section>
 
             <section aria-labelledby="destinatarios-datos">
               <h2 id="destinatarios-datos" className="font-heading text-2xl font-semibold text-[#154677]">3. Quiénes intervienen</h2>
-              <p className="mt-4">El formulario transmite la consulta a una casilla de correo de {empresa.nombreCompleto} mediante Resend, proveedor tecnológico del servicio de envío de correos. <a href="https://resend.com/security" target="_blank" rel="noopener noreferrer" className="font-semibold text-[#087CE5] underline underline-offset-4">Resend informa</a> que almacena los datos de esos correos en Estados Unidos. El personal de la empresa que atiende consultas puede acceder al mensaje para responderlo. La IP usada para limitar envíos no se agrega al correo de consulta.</p>
-              <p className="mt-3">La página de <Link href="/sucursales" className="font-semibold text-[#087CE5] underline underline-offset-4">sucursales</Link> muestra mapas incrustados de Google. Al cargar esos mapas, tu navegador puede comunicarse con Google y ese proveedor puede tratar datos técnicos conforme a sus propias políticas. Los enlaces a WhatsApp abren ese servicio cuando decidís usarlos.</p>
+              <p className="mt-4">Enviamos tu consulta a una casilla de correo de {empresa.nombreCompleto} mediante Resend, el proveedor que usamos para enviar correos. <a href="https://resend.com/security" target="_blank" rel="noopener noreferrer" className="font-semibold text-[#087CE5] underline underline-offset-4">Resend informa</a> que almacena los datos de esos correos en Estados Unidos. El personal que atiende las consultas puede leer tu mensaje para responderte. La IP que usamos para limitar los envíos no se agrega al correo de la consulta.</p>
+              <p className="mt-3">En la página de <Link href="/sucursales" className="font-semibold text-[#087CE5] underline underline-offset-4">sucursales</Link> mostramos mapas incrustados de Google. Cuando se cargan, tu navegador puede comunicarse con Google, que puede tratar datos técnicos según sus propias políticas. Los enlaces a WhatsApp abren ese servicio únicamente si decidís usarlos.</p>
             </section>
 
             <section aria-labelledby="opciones-datos">
               <h2 id="opciones-datos" className="font-heading text-2xl font-semibold text-[#154677]">4. Tus opciones al completar el formulario</h2>
-              <p className="mt-4">Antes de enviar la consulta te pedimos una autorización específica para tratar los datos con esa finalidad, incluido su envío y almacenamiento mediante Resend en Estados Unidos. Si no proporcionás nombre, correo, mensaje o autorización, el formulario no podrá enviarse; podés contactarnos por los canales publicados en el sitio. La empresa y el teléfono son facultativos. Si los datos de contacto son incorrectos, es posible que no podamos responderte.</p>
-              <p className="mt-3">El envío del formulario no implica contratar un servicio de transporte ni aceptar condiciones comerciales para un envío.</p>
+              <p className="mt-4">Antes de enviar el formulario, te pedimos autorización específica para usar tus datos al gestionar y responder la consulta. Esto incluye el envío y almacenamiento del correo mediante Resend en Estados Unidos. Sin nombre, correo electrónico, mensaje o autorización, el formulario no puede enviarse. Podés comunicarte por los otros canales que publicamos en el sitio. El nombre de la empresa y el teléfono son opcionales. Si tus datos de contacto son incorrectos, tal vez no podamos responderte.</p>
+              <p className="mt-3">Enviar el formulario no significa contratar un transporte ni aceptar las condiciones comerciales de un envío.</p>
             </section>
 
             <section aria-labelledby="derechos-datos">
               <h2 id="derechos-datos" className="font-heading text-2xl font-semibold text-[#154677]">5. Acceso, rectificación y supresión</h2>
-              <p className="mt-4">Podés solicitar acceso a tus datos, su rectificación o actualización y, cuando corresponda, su supresión. Para hacerlo, escribí a cualquiera de los correos indicados abajo o dirigite a una sucursal. Podremos pedirte información razonable para verificar tu identidad y proteger tus datos antes de responder.</p>
+              <p className="mt-4">Podés pedir acceso a tus datos, solicitar que se corrijan o actualicen y, cuando corresponda, pedir que se eliminen. Escribí a cualquiera de los correos de abajo o acercate a una sucursal. Antes de responder, podremos pedirte información razonable para verificar tu identidad y proteger tus datos.</p>
               <ul className="mt-4 space-y-4">
                 {sucursales.map((sucursal) => (
                   <li key={sucursal.nombre}>
@@ -74,7 +77,7 @@ export default function ContenidoPrivacidad() {
 
             <section aria-labelledby="actualizaciones-privacidad">
               <h2 id="actualizaciones-privacidad" className="font-heading text-2xl font-semibold text-[#154677]">6. Cambios en esta política</h2>
-              <p className="mt-4">Si cambia la forma en que funciona el formulario o tratamos la información, actualizaremos esta página. Podés consultar los <Link href="/terminos-y-condiciones" className="font-semibold text-[#087CE5] underline underline-offset-4">Términos y condiciones de uso del sitio</Link> para conocer cómo se gestionan las consultas.</p>
+              <p className="mt-4">Si cambia el funcionamiento del formulario o la forma en que tratamos tus datos, actualizaremos esta página. También podés leer los <Link href="/terminos-y-condiciones" className="font-semibold text-[#087CE5] underline underline-offset-4">Términos y condiciones de uso del sitio</Link> para conocer cómo gestionamos las consultas.</p>
             </section>
           </div>
         </div>

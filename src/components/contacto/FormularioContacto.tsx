@@ -95,7 +95,7 @@ export default function FormularioContacto() {
 
       toast({
         title: "¡Mensaje enviado!",
-        description: "Nos pondremos en contacto a la brevedad. Gracias por escribirnos.",
+        description: "Recibimos tu consulta. Te responderemos a través de los datos de contacto que nos dejaste.",
       });
       setDatosFormulario(datosIniciales);
       setMielero("");
@@ -113,7 +113,7 @@ export default function FormularioContacto() {
   return (
     <form onSubmit={manejarEnvio} noValidate aria-busy={estaCargando} className="relative border border-[#C9DCEB] bg-white p-6 shadow-[0_18px_45px_-35px_rgba(21,70,119,0.3)] sm:p-9 lg:p-11">
       <div className="mb-8 border-b border-[#D6E5F1] pb-6">
-        <h3 className="font-heading text-2xl font-semibold tracking-tight text-[#154677] sm:text-3xl">Contanos qué necesitás enviar</h3>
+        <h3 className="font-heading text-2xl font-semibold tracking-tight text-[#154677] sm:text-3xl">Contanos sobre tu envío</h3>
         <p className="mt-2 text-sm text-[#42617F]">Los campos marcados con * son obligatorios.</p>
       </div>
 
@@ -128,7 +128,7 @@ export default function FormularioContacto() {
           <input id="empresa" name="empresa" value={datosFormulario.empresa} onChange={manejarCambio} placeholder="Nombre de la empresa" autoComplete="organization" disabled={estaCargando} className={claseCampo} />
         </div>
         <div>
-          <label htmlFor="correo" className={claseEtiqueta}>Email *</label>
+          <label htmlFor="correo" className={claseEtiqueta}>Correo electrónico *</label>
           <input id="correo" name="correo" type="email" value={datosFormulario.correo} onChange={manejarCambio} placeholder="correo@empresa.com" autoComplete="email" required disabled={estaCargando} aria-invalid={Boolean(errores.correo)} aria-describedby={errores.correo ? "error-correo" : undefined} className={claseCampo} />
           {errores.correo && <p id="error-correo" role="alert" className={claseError}>{errores.correo}</p>}
         </div>
@@ -139,7 +139,7 @@ export default function FormularioContacto() {
         </div>
         <div className="sm:col-span-2">
           <label htmlFor="mensaje" className={claseEtiqueta}>Mensaje *</label>
-          <textarea id="mensaje" name="mensaje" value={datosFormulario.mensaje} onChange={manejarCambio} placeholder="Indicá origen, destino, tipo de carga, medidas y peso aproximados..." rows={5} required disabled={estaCargando} aria-invalid={Boolean(errores.mensaje)} aria-describedby={errores.mensaje ? "error-mensaje" : undefined} className={`${claseCampo} min-h-36 resize-y`} />
+          <textarea id="mensaje" name="mensaje" value={datosFormulario.mensaje} onChange={manejarCambio} placeholder="Contanos qué querés enviar, entre qué ciudades y cuáles son sus medidas y peso aproximados." rows={5} required disabled={estaCargando} aria-invalid={Boolean(errores.mensaje)} aria-describedby={errores.mensaje ? "error-mensaje" : undefined} className={`${claseCampo} min-h-36 resize-y`} />
           {errores.mensaje && <p id="error-mensaje" role="alert" className={claseError}>{errores.mensaje}</p>}
         </div>
       </div>

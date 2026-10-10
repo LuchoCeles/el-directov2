@@ -28,7 +28,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-white/75">
-              Transportadore El Directo SRL conecta Rosario y Mar del Plata con transporte de encomiendas y cargas en ambos sentidos. También coordina retiros, entregas y redespachos según el destino.
+              {empresa.descripcion}
             </p>
           </div>
 
@@ -73,7 +73,7 @@ export default function Footer() {
                         {sucursal.correo}
                       </a>
                       <a
-                        href={`https://wa.me/${sucursal.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent("Hola, me gustaría recibir información sobre sus servicios de transporte.")}`}
+                        href={`https://wa.me/${sucursal.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent("Hola, quisiera consultar por un envío. ¿Me pueden ayudar?")}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="mt-1 inline-flex items-center gap-2 hover:text-[#9BD0FF] focus-visible:rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
