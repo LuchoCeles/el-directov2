@@ -45,9 +45,10 @@ export default function PaginaPreguntasFrecuentes() {
                 </h1>
               </div>
               <p className="max-w-lg text-base leading-8 text-[#365572] sm:text-lg">
-                Reunimos las dudas más comunes sobre cómo preparar la carga,
-                cotizar un envío y coordinar el retiro, la entrega o un
-                redespacho.
+                Si vas a enviar desde Rosario o Mar del Plata, acá encontrás
+                respuestas sobre encomiendas, cargas, cotizaciones, retiros,
+                entregas y redespachos. Así podés preparar tu consulta con
+                la información que necesitamos.
               </p>
             </div>
           </div>
@@ -94,6 +95,17 @@ export default function PaginaPreguntasFrecuentes() {
                   </p>
                 </details>
               ))}
+              <nav aria-label="Más información para organizar tu envío" className="pt-8">
+                <p className="mb-4 text-sm font-semibold text-[#154677]">
+                  Seguí con la información que necesitás:
+                </p>
+                <ul className="flex flex-wrap gap-x-6 gap-y-3 text-sm leading-7">
+                  <li><Link href="/envios-a-mar-del-plata" className="font-semibold underline decoration-[#087CE5] underline-offset-4 hover:text-[#087CE5]">Envíos de Rosario a Mar del Plata</Link></li>
+                  <li><Link href="/envios-a-rosario" className="font-semibold underline decoration-[#087CE5] underline-offset-4 hover:text-[#087CE5]">Envíos de Mar del Plata a Rosario</Link></li>
+                  <li><Link href="/servicios" className="font-semibold underline decoration-[#087CE5] underline-offset-4 hover:text-[#087CE5]">Servicios de transporte</Link></li>
+                  <li><Link href="/sucursales" className="font-semibold underline decoration-[#087CE5] underline-offset-4 hover:text-[#087CE5]">Direcciones y horarios de las sucursales</Link></li>
+                </ul>
+              </nav>
             </div>
           </div>
         </section>

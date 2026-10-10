@@ -4,14 +4,14 @@ import { ArrowUpRight } from "lucide-react";
 const pasos = [
   {
     titulo: "Describí la carga",
-    descripcion: "Contanos qué vas a enviar, cuánto mide y pesa aproximadamente, y entre qué ciudades tiene que viajar.",
+    descripcion: "Contanos si vas a enviar cajas, muebles, mercadería, un vehículo u otra carga. Indicá sus medidas y peso aproximados, y el origen y destino.",
   },
   {
     titulo: "Prepará el despacho",
     descripcion: "Te indicamos cómo preparar la carga y dónde llevarla. Si necesitás que la retiremos en tu domicilio, consultanos la disponibilidad.",
   },
   {
-    titulo: "Elegí cómo recibirlo",
+    titulo: "Elegí cómo recibir la carga",
     descripcion: "Podés retirar en la sucursal de destino o consultar por entrega a domicilio. Para otra localidad, confirmaremos si hay redespacho y su plazo antes de coordinarlo.",
   },
 ];
@@ -23,7 +23,7 @@ export default function ProcesoConsulta() {
         <div>
           <p className="eyebrow">Cómo trabajamos</p>
           <h2 id="titulo-proceso-servicios" className="mt-5 max-w-md font-heading text-3xl font-semibold leading-tight tracking-[-0.04em] sm:text-4xl">Cómo cotizar y preparar tu carga</h2>
-          <p className="mt-6 max-w-md text-base leading-8 text-[#365572]">El precio depende de lo que enviás y del recorrido. Con los datos básicos de tu carga podemos decirte qué opciones hay y preparar un presupuesto.</p>
+          <p className="mt-6 max-w-md text-base leading-8 text-[#365572]">El precio depende del tipo de carga, sus medidas y peso, el recorrido y los servicios que necesites. Pasanos esos datos para que podamos cotizar el transporte y confirmar las opciones de retiro, entrega o redespacho.</p>
           <Link href="/contacto" className="mt-7 inline-flex min-h-12 items-center gap-2 border-b border-[#087CE5] text-sm font-bold text-[#154677] hover:text-[#087CE5] focus-visible:text-[#087CE5]">
             Pedir una cotización <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
           </Link>

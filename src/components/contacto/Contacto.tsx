@@ -11,15 +11,16 @@ export default function Contacto() {
             Cotizá tu envío
           </h2>
           <p className="mt-6 max-w-md text-base leading-relaxed text-[#42617F] sm:text-lg">
-            Contanos qué querés enviar y te respondemos para ayudarte a
-            organizar el traslado.
+            Contanos qué querés enviar, cuántos bultos son, sus medidas y peso
+            aproximados, y las ciudades de origen y destino. Si necesitás
+            retiro o entrega a domicilio, agregá las direcciones.
           </p>
           <p className="mt-6 max-w-md text-sm leading-relaxed text-[#42617F]">
             Si preferís hablar por teléfono, correo o WhatsApp, encontrá los
             datos de nuestras sucursales en Rosario y Mar del Plata.
           </p>
           <Link href="/sucursales" className="mt-4 inline-flex min-h-11 items-center font-bold underline decoration-[#087CE5] underline-offset-4 hover:text-[#087CE5] focus-visible:rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#087CE5]">
-            Ver teléfonos y direcciones
+            Ver teléfonos, direcciones y horarios
           </Link>
         </div>
         <FormularioContacto />

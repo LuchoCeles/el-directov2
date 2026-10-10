@@ -27,8 +27,13 @@ export default function TarjetaSucursal({
             Sucursal {String(indice + 1).padStart(2, "0")}
           </p>
           <h2 className="mt-3 font-heading text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">
-            {sucursal.nombre}
+            Sucursal de transporte en {sucursal.nombre}
           </h2>
+          <p className="mt-5 max-w-lg text-sm leading-7 text-[#42617F]">
+            Acercate para despachar una encomienda o carga, o para retirar un
+            envío que llegó a {sucursal.nombre}. Si necesitás coordinar otra
+            opción de entrega, consultanos antes de venir.
+          </p>
           <address className="mt-8 not-italic">
             <div className="flex items-start gap-3 text-base font-semibold leading-7">
               <MapPin

@@ -21,7 +21,7 @@ const Servicios = () => {
             </h2>
           </div>
           <p className="max-w-2xl self-end text-base leading-7 text-[#154677]/80 sm:text-lg sm:leading-8">
-            Desde un paquete hasta muebles o mercadería para tu negocio, cada envío necesita una preparación distinta. Consultanos por el despacho y, si lo necesitás, por retiro o entrega a domicilio.
+            Una caja pequeña, varios bultos o la mercadería de tu negocio necesitan preparaciones distintas. Decinos qué querés enviar y te orientamos sobre el embalaje, el despacho y las opciones de retiro o entrega a domicilio.
           </p>
         </div>
 
@@ -50,9 +50,10 @@ const Servicios = () => {
         </ol>
 
         <div className="mt-16 grid gap-7 border-t-2 border-[#154677] pt-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.4fr)] lg:gap-20">
-          <h3 className="font-heading text-2xl leading-tight text-[#154677] sm:text-3xl">
-            Tipos de carga que transportamos
-          </h3>
+          <div>
+            <h3 className="font-heading text-2xl leading-tight text-[#154677] sm:text-3xl">Qué carga podés enviarnos</h3>
+            <p className="mt-5 max-w-md text-sm leading-7 text-[#154677]/80 sm:text-base">Transportamos mercadería paletizada, heladeras y otros artículos de línea blanca, equipos gastronómicos y muebles. Si el artículo es voluminoso o frágil, consultanos antes de llevarlo a la sucursal para saber cómo protegerlo.</p>
+          </div>
           <ul className="grid gap-x-8 gap-y-3 sm:grid-cols-2">
             {tiposDeCarga.map((tipo) => (
               <li

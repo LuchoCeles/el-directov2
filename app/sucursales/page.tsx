@@ -53,9 +53,10 @@ export default function PaginaSucursales() {
                 </h1>
               </div>
               <p className="max-w-lg text-base leading-8 text-[#365572] sm:text-lg">
-                Si querés despachar o retirar una encomienda o una carga,
-                acá tenés la dirección, los horarios y las formas de contacto
-                de cada sucursal.
+                Encontrá nuestras sucursales de transporte en Rosario y Mar
+                del Plata. Consultá dónde despachar o retirar una encomienda
+                o carga, los horarios de atención y cómo comunicarte con cada
+                sede.
               </p>
             </div>
             <div className="mt-10 flex flex-wrap gap-3">
@@ -103,9 +104,10 @@ export default function PaginaSucursales() {
                 ¿Querés saber cuánto cuesta tu envío?
               </h2>
               <p className="mt-5 max-w-xl text-base leading-8 text-[#365572]">
-                Contanos qué vas a transportar, su tamaño aproximado y desde
-                dónde hasta dónde tiene que viajar. Con esos datos podemos
-                orientarte sobre la cotización.
+                Contanos qué vas a transportar, cuántos bultos son, sus
+                medidas y peso aproximados, y las ciudades de origen y destino.
+                Si necesitás retiro o entrega a domicilio, incluí las
+                direcciones para que podamos orientarte sobre la cotización.
               </p>
             </div>
             <Link

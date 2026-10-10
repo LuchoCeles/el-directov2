@@ -27,14 +27,14 @@ export default function PaginaServicios() {
                 Transporte para tus encomiendas y cargas
               </h1>
               <p className="mt-7 max-w-xl text-base leading-8 text-[#365572] sm:text-lg">
-                En {empresa.nombreCompleto} llevamos tus envíos entre Rosario y Mar del Plata. También podemos ayudarte con mudanzas, vehículos y conexiones a otras localidades. Contanos qué necesitás transportar y te orientamos.
+                En {empresa.nombreCompleto} transportamos encomiendas y cargas entre Rosario y Mar del Plata en ambos sentidos. Podés consultarnos por el envío de paquetes, mercadería, muebles o vehículos, y por la organización de una mudanza. Contanos qué necesitás llevar para evaluar tu caso.
               </p>
               <div className="mt-9 flex flex-wrap items-center gap-6">
                 <Link href="/contacto" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#087CE5] px-7 py-3 text-sm font-bold text-white transition-colors hover:bg-[#154677] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#087CE5]">
                   Consultar un envío <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
                 </Link>
                 <Link href="/cobertura" className="inline-flex min-h-12 items-center gap-2 text-sm font-bold underline-offset-4 hover:underline focus-visible:underline">
-                  Ver cobertura <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  Ver rutas y destinos <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </Link>
               </div>
             </div>
@@ -57,11 +57,11 @@ export default function PaginaServicios() {
               <h2 id="titulo-rutas-servicios" className="mt-5 font-heading text-3xl font-semibold leading-tight tracking-[-0.04em] sm:text-4xl">Un trayecto directo en ambos sentidos</h2>
             </div>
             <div>
-              <p className="text-base leading-8 text-[#365572]">Elegí la ciudad de destino para ver cómo despachar y recibir tu carga. Si necesitás enviarla a otra localidad, consultanos si hay una conexión disponible y qué plazo tendría.</p>
+              <p className="text-base leading-8 text-[#365572]">Para enviar de Rosario a Mar del Plata o de Mar del Plata a Rosario, elegí tu ruta y conocé las sucursales de origen y destino. Si la carga sigue viaje hacia otra localidad, consultanos por disponibilidad, costo y plazo del redespacho.</p>
               <div className="mt-7 grid gap-3 sm:grid-cols-2">
                 {rutasDirectas.map((ruta) => (
                   <Link key={ruta.slug} href={`/${ruta.slug}`} className="group flex min-h-16 items-center justify-between gap-4 border-t border-[#C9DCEB] py-4 text-sm font-bold text-[#154677] transition-colors hover:text-[#087CE5] focus-visible:text-[#087CE5]">
-                    Envíos a {ruta.destino.nombre} <ArrowUpRight className="h-4 w-4 shrink-0 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
+                    Envíos de {ruta.origen.nombre} a {ruta.destino.nombre} <ArrowUpRight className="h-4 w-4 shrink-0 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
                   </Link>
                 ))}
               </div>

@@ -27,10 +27,10 @@ export default function PaginaCobertura() {
                 Enviá entre Rosario y Mar del Plata
               </h1>
               <p className="mt-7 max-w-xl text-base leading-8 text-[#365572] sm:text-lg">
-                {empresa.nombreCompleto} lleva encomiendas y cargas entre {ciudadesDirecto.join(" y ")} en ambos sentidos. Si tu destino es otra localidad, consultanos por las conexiones disponibles desde nuestras sucursales.
+                {empresa.nombreCompleto} conecta {ciudadesDirecto.join(" y ")} con transporte directo de encomiendas y cargas, sin transbordo entre sus sucursales. Si el destino final está en otra localidad, podemos consultar un redespacho y confirmarte su disponibilidad, costo y plazo.
               </p>
               <Link href="#rutas-directas" className="mt-9 inline-flex min-h-12 w-fit items-center gap-2 border-b border-[#087CE5] text-sm font-bold underline-offset-4 hover:text-[#087CE5] focus-visible:text-[#087CE5]">
-                Explorar rutas <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                Ver rutas de ida y vuelta <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Link>
             </div>
             <div className="relative min-h-[320px] sm:min-h-[440px] lg:min-h-full">
@@ -49,6 +49,7 @@ export default function PaginaCobertura() {
           <div className="mx-auto max-w-6xl">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#087CE5]">Puntos de atención</p>
             <h2 id="titulo-sucursales-cobertura" className="mt-5 font-heading text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">Dónde llevar o retirar tu carga</h2>
+            <p className="mt-5 max-w-2xl text-base leading-8 text-[#365572]">Podés despachar o retirar en nuestras sedes. Si necesitás un retiro en origen o una entrega a domicilio, pasanos la dirección para consultar si podemos coordinarlo.</p>
             <div className="mt-12 grid gap-10 md:grid-cols-2 md:gap-16">
               {sucursales.map((sucursal) => (
                 <address key={sucursal.nombre} className="border-t border-[#C9DCEB] pt-6 not-italic">
@@ -60,6 +61,7 @@ export default function PaginaCobertura() {
                 </address>
               ))}
             </div>
+            <Link href="/sucursales" className="mt-8 inline-flex min-h-11 items-center gap-2 border-b border-[#087CE5] text-sm font-bold text-[#154677] hover:text-[#087CE5]">Ver teléfonos y horarios de ambas sucursales <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
           </div>
         </section>
       </main>

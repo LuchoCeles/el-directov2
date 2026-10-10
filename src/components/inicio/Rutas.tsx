@@ -21,7 +21,7 @@ const Rutas = () => {
             ¿Desde dónde necesitás enviar?
           </h2>
           <p className="mt-7 max-w-lg text-base leading-7 text-[#154677]/80 sm:text-lg sm:leading-8">
-            Hacemos viajes directos entre Rosario y Mar del Plata en ambos sentidos. Elegí tu trayecto para ver dónde despachar y retirar. Si necesitás retiro o entrega a domicilio, consultanos la disponibilidad.
+            Hacemos viajes directos entre nuestras sucursales de Rosario y Mar del Plata en ambos sentidos. Elegí tu trayecto para ver las direcciones, los horarios de atención y cómo coordinar un retiro o una entrega a domicilio.
           </p>
         </div>
 
@@ -47,7 +47,7 @@ const Rutas = () => {
                     href={`/${ruta.slug}`}
                     className="mt-6 inline-flex min-h-11 items-center gap-2 border-b border-[#087CE5] font-semibold text-[#154677] transition-colors hover:border-[#154677] hover:text-[#154677] focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#154677]"
                   >
-                    Ver envíos a {ruta.destino.nombre}
+                    Envíos de {ruta.origen.nombre} a {ruta.destino.nombre}
                     <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
                   </Link>
                 </div>

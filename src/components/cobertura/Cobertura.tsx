@@ -14,18 +14,18 @@ export default function Cobertura() {
           <div className="max-w-[610px]">
             <p className="eyebrow">Destinos con redespacho</p>
             <h2 id="titulo-cobertura" className="font-heading mt-5 text-4xl leading-[1.1] tracking-tight text-[#154677] sm:text-5xl">¿Tu envío va a otra localidad?</h2>
-            <p className="mt-6 text-base leading-8 text-[#3d5975]">Desde nuestras sucursales podemos coordinar redespachos a los destinos que aparecen abajo. Escribinos para confirmar si hay disponibilidad y conocer el costo y el plazo de tu envío.</p>
+            <p className="mt-6 text-base leading-8 text-[#3d5975]">Si tu carga sigue viaje después de Rosario o Mar del Plata, podemos consultar un redespacho desde la sucursal de llegada. Los destinos de referencia aparecen abajo. Escribinos con tu localidad exacta para confirmar disponibilidad, costo y plazo. Si el destino está en La Pampa o se llama Otamendi, indicanos la localidad precisa para consultar la cobertura.</p>
             <div className="mt-8 space-y-8 border-t border-[#c7d9e9] pt-6">
               {redespachosPorSucursal.map(({ sucursal, destinos }) => (
                 <div key={sucursal.nombre}>
                   <h3 className="font-heading text-xl font-semibold text-[#154677]">Desde {sucursal.nombre}</h3>
                   <ul className="mt-3 columns-2 gap-x-6 text-sm leading-9 text-[#154677] sm:gap-x-10 sm:text-base">
-                    {destinos.map((ciudad) => <li key={ciudad} className="break-inside-avoid">{ciudad}</li>)}
+                    {destinos.map((destino) => <li key={destino} className="break-inside-avoid">{destino}</li>)}
                   </ul>
                 </div>
               ))}
             </div>
-            <Link href="/contacto" className="mt-8 inline-flex min-h-11 items-center gap-2 border-b border-[#087ce5] text-sm font-bold text-[#154677] hover:text-[#087ce5]">Consultar mi destino <ArrowUpRight size={17} aria-hidden="true" /></Link>
+            <Link href="/contacto" className="mt-8 inline-flex min-h-11 items-center gap-2 border-b border-[#087ce5] text-sm font-bold text-[#154677] hover:text-[#087ce5]">Consultar disponibilidad de un redespacho <ArrowUpRight size={17} aria-hidden="true" /></Link>
           </div>
         </div>
       </div>
