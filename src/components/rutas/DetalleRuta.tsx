@@ -66,10 +66,10 @@ export default function DetalleRuta({ ruta, rutaOpuesta }: PropiedadesDetalleRut
           __html: JSON.stringify(esquemaRuta).replace(/</g, "\\u003c"),
         }} />
 
-        <section className="relative overflow-hidden bg-[#EAF2FA]">
-          <div className="mx-auto grid max-w-[1440px] lg:min-h-[600px] lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">
-            <div className="relative z-10 flex flex-col justify-center px-6 pb-14 pt-8 sm:px-10 lg:px-10 lg:pb-14 lg:pt-12 xl:px-14">
-              <nav aria-label="Ruta de navegación" className="mb-10 text-xs font-semibold uppercase tracking-[0.16em] text-[#365572] lg:mb-7">
+        <section className="cabecera-ajustable relative overflow-hidden bg-[#EAF2FA]">
+          <div className="cabecera-ajustable__contenido mx-auto grid max-w-[1440px] lg:min-h-[600px] lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">
+            <div className="cabecera-ajustable__texto relative z-10 flex flex-col justify-center px-6 pb-14 pt-8 sm:px-10 lg:px-10 lg:pb-14 lg:pt-12 xl:px-14">
+              <nav aria-label="Ruta de navegación" className="cabecera-ajustable__migas mb-10 text-xs font-semibold uppercase tracking-[0.16em] text-[#365572] lg:mb-7">
                 <ol className="flex flex-wrap items-center gap-2">
                   <li><Link href="/" className="transition-colors hover:text-[#087CE5] focus-visible:underline">Inicio</Link></li>
                   <li aria-hidden="true">/</li>
@@ -77,10 +77,10 @@ export default function DetalleRuta({ ruta, rutaOpuesta }: PropiedadesDetalleRut
                 </ol>
               </nav>
               <p className="mb-5 text-xs font-bold uppercase tracking-[0.22em] text-[#087CE5] lg:mb-4">Transporte directo entre sucursales</p>
-              <h1 className="max-w-2xl font-heading text-[clamp(2.45rem,5vw,4.8rem)] font-semibold leading-[1.09] tracking-[-0.055em] text-[#154677]">{ruta.titulo}</h1>
-              <p className="mt-7 max-w-xl text-base leading-8 text-[#365572] sm:text-lg lg:mt-5 lg:max-w-none lg:leading-7">Enviá encomiendas, paquetes o carga de {ruta.origen.nombre} a {ruta.destino.nombre}, sin transbordos entre sucursales. Los camiones salen los {itinerarioDirecto.diasSalida.join(" y ")} desde ambas ciudades. La llegada a la sucursal de destino está prevista {itinerarioDirecto.arriboPrevisto.referencia} a las {itinerarioDirecto.arriboPrevisto.hora}.</p>
+              <h1 className="cabecera-ajustable__titulo max-w-2xl font-heading text-[clamp(2.45rem,5vw,4.8rem)] font-semibold leading-[1.09] tracking-[-0.055em] text-[#154677]">{ruta.titulo}</h1>
+              <p className="cabecera-ajustable__descripcion mt-7 max-w-xl text-base leading-8 text-[#365572] sm:text-lg lg:mt-5 lg:max-w-none lg:leading-7">Enviá encomiendas, paquetes o carga de {ruta.origen.nombre} a {ruta.destino.nombre}, sin transbordos entre sucursales. Los camiones salen los {itinerarioDirecto.diasSalida.join(" y ")} desde ambas ciudades. La llegada a la sucursal de destino está prevista {itinerarioDirecto.arriboPrevisto.referencia} a las {itinerarioDirecto.arriboPrevisto.hora}.</p>
               <p className="mt-4 max-w-xl text-sm leading-6 text-[#365572] lg:max-w-none lg:text-[0.9375rem]">Esa hora corresponde a la llegada prevista del camión a la sucursal: no significa que el envío pueda retirarse ni que se entregue a domicilio a las {itinerarioDirecto.arriboPrevisto.hora}. Consultá los horarios de atención y coordiná con nosotros si necesitás retiro o entrega.</p>
-              <div className="mt-9 flex flex-wrap items-center gap-x-7 gap-y-5 lg:mt-7">
+              <div className="cabecera-ajustable__acciones mt-9 flex flex-wrap items-center gap-x-7 gap-y-5 lg:mt-7">
                 <Link href="/contacto" className="inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-[#087CE5] px-7 py-3 text-sm font-bold text-white transition-colors hover:bg-[#154677] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#087CE5]">
                   Cotizar un envío <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
                 </Link>
@@ -89,7 +89,7 @@ export default function DetalleRuta({ ruta, rutaOpuesta }: PropiedadesDetalleRut
                 </Link>
               </div>
             </div>
-            <div className="relative min-h-[320px] sm:min-h-[440px] lg:min-h-full">
+            <div className="cabecera-ajustable__imagen relative min-h-[320px] sm:min-h-[440px] lg:min-h-full">
               {imagen && <Image src={imagen.archivo} alt={imagen.descripcion} fill preload sizes="(max-width: 1023px) 100vw, 55vw" className="object-cover object-center" />}
             </div>
           </div>

@@ -12,10 +12,10 @@ export default function PaginaServicios() {
     <div className="min-h-screen bg-white text-[#154677]">
       <Header />
       <main>
-        <section className="bg-[#EAF2FA]" aria-labelledby="titulo-pagina-servicios">
-          <div className="mx-auto grid max-w-[1600px] lg:min-h-[620px] lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)]">
-            <div className="flex flex-col justify-center px-5 pb-14 pt-8 sm:px-10 lg:px-16 lg:py-20 xl:px-24">
-              <nav aria-label="Ruta de navegación" className="mb-12 text-xs font-semibold uppercase tracking-[0.16em] text-[#365572]">
+        <section className="cabecera-ajustable bg-[#EAF2FA]" aria-labelledby="titulo-pagina-servicios">
+          <div className="cabecera-ajustable__contenido mx-auto grid max-w-[1600px] lg:min-h-[620px] lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)]">
+            <div className="cabecera-ajustable__texto flex flex-col justify-center px-5 pb-14 pt-8 sm:px-10 lg:px-16 lg:py-20 xl:px-24">
+              <nav aria-label="Ruta de navegación" className="cabecera-ajustable__migas mb-12 text-xs font-semibold uppercase tracking-[0.16em] text-[#365572]">
                 <ol className="flex items-center gap-2">
                   <li><Link href="/" className="hover:text-[#087CE5] focus-visible:underline">Inicio</Link></li>
                   <li aria-hidden="true">/</li>
@@ -23,13 +23,13 @@ export default function PaginaServicios() {
                 </ol>
               </nav>
               <p className="eyebrow">Transporte y logística</p>
-              <h1 id="titulo-pagina-servicios" className="mt-5 max-w-2xl font-heading text-[clamp(2.5rem,5.5vw,5.2rem)] font-semibold leading-[1.07] tracking-[-0.055em]">
+              <h1 id="titulo-pagina-servicios" className="cabecera-ajustable__titulo mt-5 max-w-2xl font-heading text-[clamp(2.5rem,5.5vw,5.2rem)] font-semibold leading-[1.07] tracking-[-0.055em]">
                 Transporte para tus encomiendas y cargas
               </h1>
-              <p className="mt-7 max-w-xl text-base leading-8 text-[#365572] sm:text-lg">
+              <p className="cabecera-ajustable__descripcion mt-7 max-w-xl text-base leading-8 text-[#365572] sm:text-lg">
                 En {empresa.nombreCompleto} transportamos encomiendas y cargas entre Rosario y Mar del Plata en ambos sentidos. Podés consultarnos por el envío de paquetes, mercadería, muebles o vehículos, y por la organización de una mudanza. Contanos qué necesitás llevar para evaluar tu caso.
               </p>
-              <div className="mt-9 flex flex-wrap items-center gap-6">
+              <div className="cabecera-ajustable__acciones mt-9 flex flex-wrap items-center gap-6">
                 <Link href="/contacto" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#087CE5] px-7 py-3 text-sm font-bold text-white transition-colors hover:bg-[#154677] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#087CE5]">
                   Consultar un envío <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
                 </Link>
@@ -38,7 +38,7 @@ export default function PaginaServicios() {
                 </Link>
               </div>
             </div>
-            <div className="relative min-h-[320px] sm:min-h-[440px] lg:min-h-full">
+            <div className="cabecera-ajustable__imagen relative min-h-[320px] sm:min-h-[440px] lg:min-h-full">
               <Image src="/CAMION_EN_RUTA_2.webp" alt="Camión de El Directo durante un traslado de mercadería" fill preload sizes="(max-width: 1023px) 100vw, 53vw" className="object-cover object-center" />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#0b3051]/80 to-transparent px-6 pb-7 pt-20 text-sm font-semibold text-white sm:px-10">
                 Rosario <span className="mx-2 text-white/70" aria-hidden="true">↔</span> Mar del Plata

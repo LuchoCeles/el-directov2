@@ -14,7 +14,7 @@ const navegacion = [
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-[#e3eaf1] bg-white">
-      <div className="section-shell flex h-[76px] items-center justify-between gap-5 lg:h-[84px]">
+      <div className="cabecera-navegacion section-shell flex h-[76px] items-center justify-between gap-5 lg:h-[84px]">
         <Link href="/" aria-label={`${empresa.nombre}, inicio`} className="flex shrink-0 items-center gap-2.5 text-[#154677]">
           <Image src={empresa.logo} alt="" width={36} height={36} className="h-auto w-9 shrink-0 object-contain" />
           <span className="flex flex-col leading-none">

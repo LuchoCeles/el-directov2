@@ -20,12 +20,12 @@ export default function PaginaEmpresa() {
     <div className="min-h-screen bg-white text-[#154677]">
       <Header />
       <main>
-        <section className="bg-[#EAF2FA]" aria-labelledby="titulo-empresa">
-          <div className="mx-auto grid max-w-[1440px] lg:min-h-[600px] lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]">
-            <div className="flex flex-col justify-center px-6 pb-14 pt-8 sm:px-10 lg:px-8 lg:py-16 xl:px-12">
+        <section className="cabecera-ajustable bg-[#EAF2FA]" aria-labelledby="titulo-empresa">
+          <div className="cabecera-ajustable__contenido mx-auto grid max-w-[1440px] lg:min-h-[600px] lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]">
+            <div className="cabecera-ajustable__texto flex flex-col justify-center px-6 pb-14 pt-8 sm:px-10 lg:px-8 lg:py-16 xl:px-12">
               <nav
                 aria-label="Ruta de navegación"
-                className="mb-12 text-xs font-semibold uppercase tracking-[0.16em] text-[#42617F] lg:mb-6"
+                className="cabecera-ajustable__migas mb-12 text-xs font-semibold uppercase tracking-[0.16em] text-[#42617F] lg:mb-6"
               >
                 <ol className="flex items-center gap-2">
                   <li>
@@ -42,23 +42,23 @@ export default function PaginaEmpresa() {
               </p>
               <h1
                 id="titulo-empresa"
-                className="max-w-2xl font-heading text-[clamp(2.7rem,5vw,5rem)] font-semibold leading-[1.08] tracking-[-0.055em] lg:max-w-none lg:text-[clamp(2.8rem,4vw,4rem)]"
+                className="cabecera-ajustable__titulo max-w-2xl font-heading text-[clamp(2.7rem,5vw,5rem)] font-semibold leading-[1.08] tracking-[-0.055em] lg:max-w-none lg:text-[clamp(2.8rem,4vw,4rem)]"
               >
                 Una empresa fundada en {empresa.añoFundacion} que hoy conecta
                 Rosario y Mar del Plata
               </h1>
-              <p className="mt-7 max-w-xl text-base leading-8 text-[#365572] sm:text-lg lg:mt-5 lg:max-w-2xl lg:leading-7">
+              <p className="cabecera-ajustable__descripcion mt-7 max-w-xl text-base leading-8 text-[#365572] sm:text-lg lg:mt-5 lg:max-w-2xl lg:leading-7">
                 {empresa.descripcion}
               </p>
               <Link
                 href="/contacto"
-                className="mt-9 inline-flex min-h-12 w-fit items-center gap-3 rounded-full bg-[#087CE5] px-7 py-3 text-sm font-bold text-white transition-colors hover:bg-[#154677] lg:mt-7"
+                className="cabecera-ajustable__acciones mt-9 inline-flex min-h-12 w-fit items-center gap-3 rounded-full bg-[#087CE5] px-7 py-3 text-sm font-bold text-white transition-colors hover:bg-[#154677] lg:mt-7"
               >
                 Hablemos de tu envío{" "}
                 <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
               </Link>
             </div>
-            <div className="relative min-h-[340px] sm:min-h-[460px] lg:min-h-full">
+            <div className="cabecera-ajustable__imagen relative min-h-[340px] sm:min-h-[460px] lg:min-h-full">
               <Image
                 src="/CAMION_EN_RUTA_2.webp"
                 alt="Camión de transporte en ruta"

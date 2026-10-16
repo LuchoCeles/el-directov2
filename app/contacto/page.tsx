@@ -12,12 +12,12 @@ export default function PaginaContacto() {
     <>
       <Header />
       <main>
-        <section className="bg-white py-16 sm:py-20">
+        <section className="cabecera-ajustable cabecera-ajustable--simple bg-white py-16 sm:py-20">
           <div className="section-shell">
             <nav aria-label="Ruta de navegación" className="text-xs font-bold text-[#53708b]"><Link href="/" className="hover:text-[#087ce5]">Inicio</Link><span className="mx-2" aria-hidden="true">/</span>Contacto</nav>
-            <p className="eyebrow mt-12">Contacto</p>
-            <h1 className="font-heading mt-4 max-w-3xl text-[clamp(2.7rem,5vw,4.8rem)] leading-[1.08] tracking-tight text-[#154677]">Contacto y cotización de envíos</h1>
-            <p className="mt-6 max-w-2xl text-base leading-8 text-[#48647e] sm:text-lg">¿Necesitás cotizar una encomienda, una carga, una mudanza o el transporte de un vehículo? Contanos qué querés llevar y si el traslado es desde Rosario, desde Mar del Plata o hacia alguna de estas ciudades. Con esos datos podemos orientarte mejor.</p>
+            <p className="cabecera-ajustable__etiqueta eyebrow mt-12">Contacto</p>
+            <h1 className="cabecera-ajustable__titulo font-heading mt-4 max-w-3xl text-[clamp(2.7rem,5vw,4.8rem)] leading-[1.08] tracking-tight text-[#154677]">Contacto y cotización de envíos</h1>
+            <p className="cabecera-ajustable__descripcion mt-6 max-w-2xl text-base leading-8 text-[#48647e] sm:text-lg">¿Necesitás cotizar una encomienda, una carga, una mudanza o el transporte de un vehículo? Contanos qué querés llevar y si el traslado es desde Rosario, desde Mar del Plata o hacia alguna de estas ciudades. Con esos datos podemos orientarte mejor.</p>
           </div>
         </section>
         <Contacto />

@@ -4,19 +4,19 @@ import { empresa, sucursales } from "@/lib/empresa";
 export default function ContenidoPrivacidad() {
   return (
     <main className="bg-white text-[#154677]">
-      <div className="section-shell pb-20 pt-12 sm:pb-28 sm:pt-16">
-        <nav aria-label="Ruta de navegación" className="text-xs font-bold text-[#53708b]">
+      <div className="cabecera-ajustable--simple section-shell pb-20 pt-12 sm:pb-28 sm:pt-16">
+        <nav aria-label="Ruta de navegación" className="cabecera-ajustable__migas text-xs font-bold text-[#53708b]">
           <Link href="/" className="hover:text-[#087ce5]">Inicio</Link>
           <span className="mx-2" aria-hidden="true">/</span>
           Política de privacidad
         </nav>
 
-        <div className="mt-12 max-w-3xl">
+        <div className="cabecera-ajustable__introduccion mt-12 max-w-3xl">
           <p className="eyebrow">Tus datos personales</p>
-          <h1 className="font-heading mt-4 text-[clamp(2.5rem,5vw,4.5rem)] leading-[1.1] tracking-tight">
+          <h1 className="cabecera-ajustable__titulo font-heading mt-4 text-[clamp(2.5rem,5vw,4.5rem)] leading-[1.1] tracking-tight">
             Política de privacidad
           </h1>
-          <p className="mt-6 text-base leading-8 text-[#42617F] sm:text-lg">
+          <p className="cabecera-ajustable__descripcion mt-6 text-base leading-8 text-[#42617F] sm:text-lg">
             Cuando nos escribís desde el formulario, usamos los datos que nos
             compartís para gestionar tu consulta y responderte. Acá te
             contamos qué información recibimos, quién puede acceder a ella y
