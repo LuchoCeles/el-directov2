@@ -79,10 +79,11 @@
   .cabecera-ajustable__acciones { margin-top: 1.5rem; }
   .cabecera-ajustable--inicio { padding-block: 0; }
   .cabecera-ajustable--inicio .cabecera-ajustable__contenido {
-    min-height: max(34rem, calc(100svh - 72px));
+    min-height: max(28rem, calc(100svh - 72px - 7rem));
     padding-block: clamp(2rem, 6vh, 3rem);
   }
   .cabecera-ajustable--inicio .cabecera-ajustable__texto { padding-block: 0; }
+  .cabecera-ajustable--inicio .cabecera-ajustable__descripcion { font-size: 1rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
