@@ -59,7 +59,7 @@ export default function PaginaSucursales() {
                 sede.
               </p>
             </div>
-            <div className="mt-10 flex flex-wrap gap-3">
+            <div className="cabecera-ajustable__acciones mt-10 flex flex-wrap gap-3">
               {sucursales.map((sucursal) => (
                 <a
                   key={sucursal.nombre}

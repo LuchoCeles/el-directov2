@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utilidades";
 import PanelFlotante from "./PanelFlotante";
@@ -17,8 +16,7 @@ const BotonContactoFlotante = ({
   posicion = { inferior: 24, derecha: 24 },
 }: PropiedadesBotonContactoFlotante) => {
   const [estaAbierto, setEstaAbierto] = useState(false);
-  const rutaActual = usePathname();
-  const [estaVisible, setEstaVisible] = useState(rutaActual !== "/");
+  const [estaVisible, setEstaVisible] = useState(false);
 
   const manejarCierre = useCallback(() => {
     setEstaAbierto(false);
@@ -29,11 +27,6 @@ const BotonContactoFlotante = ({
   };
 
   useEffect(() => {
-    if (rutaActual !== "/") {
-      setEstaVisible(true);
-      return;
-    }
-
     const actualizarVisibilidad = () => {
       const superaUmbral = window.scrollY > 400;
       setEstaVisible(superaUmbral);
@@ -51,7 +44,7 @@ const BotonContactoFlotante = ({
       window.removeEventListener("scroll", actualizarVisibilidad);
       window.removeEventListener("pageshow", actualizarVisibilidad);
     };
-  }, [rutaActual]);
+  }, []);
 
   useEffect(() => {
     if (!estaAbierto) return;
@@ -110,7 +103,7 @@ const BotonContactoFlotante = ({
         whileTap={{ scale: 0.95 }}
         onClick={manejarAlternar}
         className={cn(
-          "w-[3.25rem] h-[3.25rem] sm:w-16 sm:h-16",
+          "size-[clamp(2.5rem,12vw,4rem)]",
           "rounded-full shadow-2xl",
           "flex items-center justify-center",
           "transition-shadow duration-200",
@@ -124,7 +117,7 @@ const BotonContactoFlotante = ({
           <motion.svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
-            className="w-[1.5rem] h-[1.5rem]"
+            className="size-[clamp(1.25rem,5.5vw,1.5rem)]"
             fill="none"
             stroke="white"
             strokeWidth="2"
@@ -138,7 +131,7 @@ const BotonContactoFlotante = ({
             <line x1="6" y1="6" x2="18" y2="18" />
           </motion.svg>
         ) : (
-          <IconoWhatsapp className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
+          <IconoWhatsapp className="size-[clamp(1.25rem,6vw,2rem)] text-white" />
         )}
       </motion.button>
     </div>

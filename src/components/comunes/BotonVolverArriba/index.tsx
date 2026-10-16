@@ -43,10 +43,10 @@ const BotonVolverArriba = () => {
             whileHover={reducirMovimiento ? undefined : { scale: 1.08 }}
             whileTap={reducirMovimiento ? undefined : { scale: 0.95 }}
             onClick={volverArriba}
-            className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary bg-primary-foreground text-primary shadow-xl transition-[background-color,box-shadow] duration-200 hover:bg-secondary hover:shadow-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-primary motion-reduce:transition-none"
+            className="flex size-[clamp(2rem,10vw,2.5rem)] items-center justify-center rounded-full border-2 border-primary bg-primary-foreground text-primary shadow-xl transition-[background-color,box-shadow] duration-200 hover:bg-secondary hover:shadow-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-primary motion-reduce:transition-none"
             aria-label="Volver al inicio de la página"
           >
-            <ChevronUp className="h-5 w-5" aria-hidden="true" />
+            <ChevronUp className="size-[clamp(1rem,5vw,1.25rem)]" aria-hidden="true" />
           </motion.button>
         </div>
       )}
