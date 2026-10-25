@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { empresa, urlSitio } from "@/lib/empresa";
 
-export const alt = `${empresa.nombreCompleto} — transporte entre Rosario y Mar del Plata`;
+export const alt = `${empresa.nombreCompleto} — encomiendas y cargas generales desde Rosario y Mar del Plata`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -37,7 +37,7 @@ export default function ImagenOpenGraph() {
       </div>
 
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", borderTop: "2px solid #bdd4e9", paddingTop: 26 }}>
-        <span style={{ fontSize: 24, fontWeight: 600 }}>Encomiendas y cargas en ambos sentidos</span>
+        <span style={{ fontSize: 24, fontWeight: 600 }}>Encomiendas y cargas generales en ambos sentidos</span>
         <span style={{ fontSize: 18, fontWeight: 700, color: "#087CE5" }}>{new URL(urlSitio).host}</span>
       </div>
     </div>,

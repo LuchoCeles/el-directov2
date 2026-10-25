@@ -17,11 +17,11 @@ const Servicios = () => {
               id="titulo-servicios"
               className="font-heading max-w-lg text-4xl leading-[1.08] tracking-tight text-[#154677] sm:text-5xl lg:text-6xl"
             >
-              Contanos qué necesitás transportar
+              Servicios para cada tipo de carga
             </h2>
           </div>
           <p className="max-w-2xl self-end text-base leading-7 text-[#154677]/80 sm:text-lg sm:leading-8">
-            Una caja pequeña, varios bultos o la mercadería de tu negocio necesitan preparaciones distintas. Decinos qué querés enviar y te orientamos sobre el embalaje, el despacho y las opciones de retiro o entrega a domicilio.
+            Desde una encomienda hasta mercadería paletizada o una carga completa. También podés consultar por retiros, entregas a domicilio y conexiones con otros destinos, según disponibilidad.
           </p>
         </div>
 
@@ -51,8 +51,9 @@ const Servicios = () => {
 
         <div className="mt-16 grid gap-7 border-t-2 border-[#154677] pt-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.4fr)] lg:gap-20">
           <div>
-            <h3 className="font-heading text-2xl leading-tight text-[#154677] sm:text-3xl">Qué carga podés enviarnos</h3>
-            <p className="mt-5 max-w-md text-sm leading-7 text-[#154677]/80 sm:text-base">Transportamos mercadería paletizada, heladeras y otros artículos de línea blanca, equipos gastronómicos y muebles. Si el artículo es voluminoso o frágil, consultanos antes de llevarlo a la sucursal para saber cómo protegerlo.</p>
+            <h3 className="font-heading text-2xl leading-tight text-[#154677] sm:text-3xl">Qué transportamos</h3>
+            <p className="mt-5 max-w-md text-sm leading-7 text-[#154677]/80 sm:text-base">Cargas generales como cajas, pallets, muebles y equipamiento comercial, además de maquinaria industrial y componentes para maquinaria agrícola. Contanos dimensiones, peso y requisitos para coordinar el traslado.</p>
+            <p className="mt-4 max-w-md text-sm leading-7 text-[#154677]/80 sm:text-base">Consultanos por alimentos envasados que no requieran refrigeración. Su aceptación depende del tipo de producto, el embalaje y los requisitos correspondientes.</p>
           </div>
           <ul className="grid gap-x-8 gap-y-3 sm:grid-cols-2">
             {tiposDeCarga.map((tipo) => (

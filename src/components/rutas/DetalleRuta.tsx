@@ -78,8 +78,8 @@ export default function DetalleRuta({ ruta, rutaOpuesta }: PropiedadesDetalleRut
               </nav>
               <p className="mb-5 text-xs font-bold uppercase tracking-[0.22em] text-[#087CE5] lg:mb-4">Transporte directo entre sucursales</p>
               <h1 className="cabecera-ajustable__titulo max-w-2xl font-heading text-[clamp(2.45rem,5vw,4.8rem)] font-semibold leading-[1.09] tracking-[-0.055em] text-[#154677]">{ruta.titulo}</h1>
-              <p className="cabecera-ajustable__descripcion mt-7 max-w-xl text-base leading-8 text-[#365572] sm:text-lg lg:mt-5 lg:max-w-none lg:leading-7">Enviá encomiendas, paquetes o carga de {ruta.origen.nombre} a {ruta.destino.nombre}, sin transbordos entre sucursales. Los camiones salen los {itinerarioDirecto.diasSalida.join(" y ")} desde ambas ciudades. La llegada a la sucursal de destino está prevista {itinerarioDirecto.arriboPrevisto.referencia} a las {itinerarioDirecto.arriboPrevisto.hora}.</p>
-              <p className="cabecera-ajustable__aviso mt-4 max-w-xl text-sm leading-6 text-[#365572] lg:max-w-none lg:text-[0.9375rem]">Esa hora corresponde a la llegada prevista del camión a la sucursal: no significa que el envío pueda retirarse ni que se entregue a domicilio a las {itinerarioDirecto.arriboPrevisto.hora}. Consultá los horarios de atención y coordiná con nosotros si necesitás retiro o entrega.</p>
+              <p className="cabecera-ajustable__descripcion mt-7 max-w-xl text-base leading-8 text-[#365572] sm:text-lg lg:mt-5 lg:max-w-none lg:leading-7">Enviá encomiendas y cargas generales de {ruta.origen.nombre} a {ruta.destino.nombre}, sin transbordos entre sucursales. Los camiones salen los {itinerarioDirecto.diasSalida.join(" y ")} desde ambas ciudades. El arribo a la sucursal de destino está previsto para {itinerarioDirecto.arriboPrevisto.referencia}.</p>
+              <p className="cabecera-ajustable__aviso mt-4 max-w-xl text-sm leading-6 text-[#365572] lg:max-w-none lg:text-[0.9375rem]">Antes de acercarte a retirar una carga o coordinar una entrega, consultanos para confirmar su disponibilidad.</p>
               <div className="cabecera-ajustable__acciones mt-9 flex flex-wrap items-center gap-x-7 gap-y-5 lg:mt-7">
                 <Link href="/contacto" className="inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-[#087CE5] px-7 py-3 text-sm font-bold text-white transition-colors hover:bg-[#154677] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#087CE5]">
                   Cotizar un envío <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
@@ -106,7 +106,7 @@ export default function DetalleRuta({ ruta, rutaOpuesta }: PropiedadesDetalleRut
             <ol className="border-t border-[#154677]/20">
               <li className="grid grid-cols-[3rem_1fr] gap-3 border-b border-[#154677]/20 py-7 sm:grid-cols-[4rem_1fr]">
                 <span className="pt-1 text-sm font-bold text-[#087CE5]">01</span>
-                <div><h3 className="text-lg font-semibold text-[#154677]">Contanos qué vas a enviar</h3><p className="mt-2 text-sm leading-7 text-[#365572]">Decinos qué es, cuánto mide y pesa aproximadamente, y entre qué direcciones tiene que viajar. Con esos datos podemos cotizarlo.</p></div>
+                <div><h3 className="text-lg font-semibold text-[#154677]">Contanos qué vas a enviar</h3><p className="mt-2 text-sm leading-7 text-[#365572]">Decinos qué es, cuánto mide y pesa aproximadamente, y las direcciones de origen y destino. Con esos datos podemos cotizarlo.</p></div>
               </li>
               <li className="grid grid-cols-[3rem_1fr] gap-3 border-b border-[#154677]/20 py-7 sm:grid-cols-[4rem_1fr]">
                 <span className="pt-1 text-sm font-bold text-[#087CE5]">02</span>
@@ -143,10 +143,10 @@ export default function DetalleRuta({ ruta, rutaOpuesta }: PropiedadesDetalleRut
                   Redespachos desde {ruta.destino.nombre}
                 </h2>
                 <p className="mt-5 text-base leading-8 text-[#365572]">
-                  Si tu carga sigue viaje desde {ruta.destino.nombre}, podemos consultar un redespacho a los destinos de referencia que aparecen abajo. Es un tramo distinto del viaje directo y depende de disponibilidad, costo y plazo. {ruta.destino.nombre === "Rosario" ? "Si tu destino está en La Pampa, indicanos la localidad exacta para consultar la cobertura." : "Si tu destino es Otamendi, indicanos a cuál localidad te referís."}
+                  Si tu carga sigue viaje desde {ruta.destino.nombre}, consultanos por un redespacho o una alternativa según el tipo de mercadería, su volumen y el destino. Los destinos y regiones de referencia de abajo no forman parte del recorrido directo y cada operación depende de disponibilidad, costo y plazo. {ruta.destino.nombre === "Rosario" ? "Si tu destino está en La Pampa, indicanos la localidad exacta para consultar la cobertura." : "Podés consultar por cualquier localidad de la Costa Atlántica bonaerense; indicá cuál necesitás, especialmente si tu destino se llama Otamendi."}
                 </p>
               </div>
-              <ul className="mt-10 grid gap-x-8 gap-y-3 border-t border-[#154677]/20 pt-7 sm:grid-cols-2 lg:grid-cols-3" aria-label={`Destinos de redespacho desde ${ruta.destino.nombre}`}>
+              <ul className="mt-10 grid gap-x-8 gap-y-3 border-t border-[#154677]/20 pt-7 sm:grid-cols-2 lg:grid-cols-3" aria-label={`Destinos y regiones de consulta desde ${ruta.destino.nombre}`}>
                 {destinosRedespacho.map((destino) => (
                   <li key={destino} className="flex items-center gap-3 text-sm font-semibold text-[#154677] sm:text-base">
                     <MapPin className="h-4 w-4 shrink-0 text-[#087CE5]" aria-hidden="true" />
@@ -168,7 +168,7 @@ export default function DetalleRuta({ ruta, rutaOpuesta }: PropiedadesDetalleRut
           <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[minmax(0,0.7fr)_minmax(0,1.3fr)] lg:gap-24">
             <h2 id="tipos-carga-ruta" className="font-heading text-3xl font-semibold tracking-[-0.04em] text-[#154677] sm:text-4xl">Qué podés enviar en esta ruta</h2>
             <div>
-              <p className="text-base leading-8 text-[#365572]">En este trayecto transportamos desde cajas y bultos hasta mercadería paletizada, heladeras, muebles y equipos gastronómicos. También podés consultar por una mudanza o el traslado de motos, autos, bicicletas y cuatriciclos. Para artículos grandes o frágiles, preguntanos cómo prepararlos antes de despacharlos.</p>
+              <p className="text-base leading-8 text-[#365572]">Transportamos cargas generales: mercadería paletizada, muebles, equipamiento comercial y también cajas y encomiendas. Consultanos por maquinaria industrial, repuestos e implementos agrícolas o alimentos envasados sin refrigeración; la aceptación depende de las características y los requisitos de cada carga. También podés consultar por una mudanza o el traslado de vehículos.</p>
               <ul className="mt-6 grid gap-x-8 gap-y-3 sm:grid-cols-2">
                 {tiposDeCarga.map((tipo) => (
                   <li key={tipo} className="border-t border-[#154677]/20 pt-3 text-sm leading-7 text-[#365572]">{tipo}</li>

@@ -15,8 +15,8 @@ export default function PaginaInicio() {
       <main>
         <HeroPrincipal />
         <FranjaValor />
-        <Rutas />
         <ResumenServicios />
+        <Rutas />
         <ResumenEmpresa />
         <AccesosInicio />
         <CierreInicio />

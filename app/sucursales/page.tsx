@@ -28,7 +28,7 @@ export default function PaginaSucursales() {
           <div className="mx-auto max-w-6xl">
             <nav
               aria-label="Ruta de navegación"
-              className="cabecera-ajustable__migas mb-14 text-xs font-semibold uppercase tracking-[0.16em] text-[#42617F]"
+              className="cabecera-ajustable__migas mb-12 text-xs font-semibold uppercase tracking-[0.16em] text-[#42617F]"
             >
               <ol className="flex items-center gap-2">
                 <li>
@@ -40,26 +40,24 @@ export default function PaginaSucursales() {
                 <li aria-current="page">Sucursales</li>
               </ol>
             </nav>
-            <div className="grid gap-8 lg:grid-cols-[1fr_0.72fr] lg:items-end lg:gap-16">
-              <div>
-                <p className="cabecera-ajustable__etiqueta mb-5 text-xs font-bold uppercase tracking-[0.2em] text-[#087CE5]">
-                  Encontranos
-                </p>
-                <h1
-                  id="titulo-sucursales"
-                  className="cabecera-ajustable__titulo font-heading text-[clamp(2.7rem,5vw,5rem)] font-semibold leading-[1.08] tracking-[-0.055em]"
-                >
-                  Sucursales en Rosario y Mar del Plata
-                </h1>
-              </div>
-              <p className="cabecera-ajustable__descripcion max-w-lg text-base leading-8 text-[#365572] sm:text-lg">
+            <div>
+              <p className="cabecera-ajustable__etiqueta mb-4 text-xs font-bold uppercase tracking-[0.2em] text-[#087CE5]">
+                Encontranos
+              </p>
+              <h1
+                id="titulo-sucursales"
+                className="cabecera-ajustable__titulo max-w-4xl font-heading text-[clamp(2.7rem,5vw,3.75rem)] font-semibold leading-[1.1] tracking-[-0.055em]"
+              >
+                Sucursales en Rosario y Mar del Plata
+              </h1>
+              <p className="cabecera-ajustable__descripcion mt-6 max-w-2xl text-base leading-8 text-[#365572] sm:text-lg">
                 Encontrá nuestras sucursales de transporte en Rosario y Mar
                 del Plata. Consultá dónde despachar o retirar una encomienda
                 o carga, los horarios de atención y cómo comunicarte con cada
                 sede.
               </p>
             </div>
-            <div className="cabecera-ajustable__acciones mt-10 flex flex-wrap gap-3">
+            <div className="cabecera-ajustable__acciones mt-8 flex flex-wrap gap-3">
               {sucursales.map((sucursal) => (
                 <a
                   key={sucursal.nombre}

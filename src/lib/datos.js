@@ -11,41 +11,41 @@ export const urlSitio = (urlCruda || "https://transporteeldirecto.com.ar").repla
 
 export const itinerarioDirecto = {
   diasSalida: ['miércoles', 'viernes'],
-  arriboPrevisto: { referencia: 'al día siguiente', hora: '08:00' },
+  arriboPrevisto: { referencia: 'el día siguiente' },
 };
 
 export const tituloSeo =
-  'Encomiendas y cargas entre Rosario y Mar del Plata | El Directo';
+  'Encomiendas y cargas generales desde Rosario y Mar del Plata | El Directo';
 
 export const descripcionSeo =
-  `Transporte de encomiendas y cargas de Rosario a Mar del Plata y de Mar del Plata a Rosario. Salimos los ${itinerarioDirecto.diasSalida.join(' y ')}. Consultanos para cotizar tu envío.`;
+  `Transporte de encomiendas y cargas generales desde Rosario y Mar del Plata, en ambos sentidos. Consultanos por equipos completos, maquinaria industrial y mercadería paletizada.`;
 
 export const empresa = {
   nombre: 'Transporte El Directo',
   sufijo: 'SRL',
   nombreCompleto: 'Transporte El Directo SRL',
   logo: '/truck.png',
-  añoFundacion: 1963,
+  trayectoria: 'Más de 60 años de trayectoria en el transporte de cargas',
   descripcion:
-    'En Transporte El Directo llevamos encomiendas y cargas entre Rosario y Mar del Plata en ambos sentidos. Si necesitás un retiro, una entrega a domicilio o un redespacho, consultanos para ver cómo coordinarlo.',
-  queHacemos: `Llevamos encomiendas, cajas y carga general entre nuestras sucursales de Rosario y Mar del Plata sin transbordos. Los camiones salen los ${itinerarioDirecto.diasSalida.join(' y ')} desde ambas ciudades y tienen previsto llegar a la sucursal de destino ${itinerarioDirecto.arriboPrevisto.referencia} a las ${itinerarioDirecto.arriboPrevisto.hora}. También transportamos mercadería paletizada, muebles, equipos y vehículos, y coordinamos mudanzas. Si necesitás retirar la carga en origen, recibirla a domicilio o enviarla a otra localidad, contanos tu caso para consultar las opciones disponibles.`,
+    'En Transporte El Directo llevamos encomiendas y cargas generales desde Rosario y Mar del Plata, en ambos sentidos. Consultanos por equipos completos, retiros, entregas a domicilio y conexiones con otros destinos.',
+  queHacemos: `Transportamos encomiendas y cargas generales desde nuestras sucursales de Rosario y Mar del Plata, en ambos sentidos y sin transbordos en el trayecto directo. Los camiones salen los ${itinerarioDirecto.diasSalida.join(' y ')} desde ambas ciudades y el arribo a destino está previsto para ${itinerarioDirecto.arriboPrevisto.referencia}. Trabajamos con cajas, mercadería paletizada, muebles y equipamiento comercial. Consultanos por equipos completos, maquinaria industrial, repuestos e implementos agrícolas y alimentos envasados sin refrigeración; evaluamos cada operación según la carga y sus requisitos. Si necesitás retirar la carga en origen, recibirla a domicilio o enviarla a otra localidad, contanos tu caso para consultar las opciones disponibles.`,
   quienesSomos: 'Somos una empresa argentina de transporte. Desde las sucursales de Rosario y Mar del Plata atendemos a personas, comercios y empresas, y organizamos cada traslado según la carga, el origen y el destino.',
 };
 
 export const metadatosPaginas = {
   servicios: {
-    titulo: 'Encomiendas, cargas y mudanzas | El Directo',
-    descripcion: 'Transportamos paquetes, carga general, muebles y vehículos entre Rosario y Mar del Plata. Conocé nuestros servicios y pedí una cotización para tu envío o mudanza.',
+    titulo: 'Equipos completos, cargas generales y encomiendas | El Directo',
+    descripcion: 'Consultanos por equipos completos, cargas generales, encomiendas, maquinaria industrial, repuestos agrícolas y alimentos envasados sin refrigeración desde Rosario y Mar del Plata.',
     imagenAlt: 'Servicios de Transporte El Directo',
   },
   cobertura: {
     titulo: 'Cobertura: Rosario, Mar del Plata y redespachos | El Directo',
-    descripcion: 'Enviamos encomiendas y cargas directamente entre Rosario y Mar del Plata. Conocé las rutas y consultá si podemos coordinar un redespacho a otra localidad.',
+    descripcion: 'Transportamos encomiendas y cargas generales desde Rosario y Mar del Plata, en ambos sentidos. Consultá por conexiones con otros destinos según la carga y disponibilidad.',
     imagenAlt: 'Cobertura de Transporte El Directo',
   },
   empresa: {
     titulo: `${empresa.nombre}: trayectoria y transporte de cargas`,
-    descripcion: `Fundada en ${empresa.añoFundacion}, ${empresa.nombreCompleto} hoy transporta encomiendas y cargas entre Rosario y Mar del Plata. Conocé nuestra empresa y cómo organizamos cada envío.`,
+    descripcion: `Con más de 60 años de trayectoria, ${empresa.nombreCompleto} transporta encomiendas y cargas generales desde Rosario y Mar del Plata, en ambos sentidos.`,
     imagenAlt: empresa.nombreCompleto,
   },
   sucursales: {
@@ -54,13 +54,13 @@ export const metadatosPaginas = {
     imagenAlt: `Sucursales de ${empresa.nombre}`,
   },
   'preguntas-frecuentes': {
-    titulo: `Preguntas sobre envíos entre Rosario y Mar del Plata | ${empresa.nombre}`,
-    descripcion: `Respondemos tus dudas sobre salidas, llegada prevista, cotización, embalaje, sucursales, mudanzas y redespachos entre Rosario y Mar del Plata.`,
+    titulo: `Preguntas sobre cargas generales y encomiendas | ${empresa.nombre}`,
+    descripcion: `Respondemos dudas sobre equipos completos, maquinaria industrial, alimentos envasados, seguros, embalaje y salidas desde Rosario y Mar del Plata.`,
     imagenAlt: `Preguntas frecuentes de ${empresa.nombre}`,
   },
   contacto: {
-    titulo: 'Cotizá envíos entre Rosario y Mar del Plata | El Directo',
-    descripcion: 'Pedí una cotización para enviar encomiendas, cargas o vehículos de Rosario a Mar del Plata o viceversa. Contactá la sucursal y contanos qué necesitás transportar.',
+    titulo: 'Cotizá encomiendas y cargas generales | El Directo',
+    descripcion: 'Pedí una cotización para enviar encomiendas, cargas generales o un equipo completo desde Rosario y Mar del Plata, en ambos sentidos. Contanos qué necesitás transportar.',
     imagenAlt: `Contacto con ${empresa.nombre}`,
   },
   'terminos-y-condiciones': {
@@ -119,8 +119,8 @@ export const rutasDirectas = [
     destino: sucursales[0],
     titulo: `Envíos a ${sucursales[0].nombre} desde ${sucursales[1].nombre}`,
     descripcion: `Podés traer tus encomiendas o tu carga a la sucursal de ${sucursales[1].nombre} para enviarlas directamente a ${sucursales[0].nombre}. Cuando lleguen, podés retirarlas en sucursal o consultar por una entrega a domicilio.`,
-    tituloSeo: `Encomiendas y cargas de Mar del Plata a Rosario | El Directo`,
-    descripcionSeo: `Enviá paquetes, encomiendas y cargas de Mar del Plata a Rosario con salidas los ${itinerarioDirecto.diasSalida.join(' y ')}. Pedí una cotización y consultá por retiro o entrega a domicilio.`,
+    tituloSeo: `Encomiendas y cargas generales de Mar del Plata a Rosario | El Directo`,
+    descripcionSeo: `Enviá encomiendas y cargas generales de Mar del Plata a Rosario con salidas los ${itinerarioDirecto.diasSalida.join(' y ')}. Consultá por retiro, entrega o equipo completo.`,
   },
   {
     slug: 'envios-a-mar-del-plata',
@@ -128,8 +128,8 @@ export const rutasDirectas = [
     destino: sucursales[1],
     titulo: `Envíos a ${sucursales[1].nombre} desde ${sucursales[0].nombre}`,
     descripcion: `Si enviás desde ${sucursales[0].nombre}, contanos qué necesitás transportar, sus medidas y el destino final. Te ayudamos a organizar el despacho y la recepción en ${sucursales[1].nombre}.`,
-    tituloSeo: `Encomiendas y cargas de Rosario a Mar del Plata | El Directo`,
-    descripcionSeo: `Enviá paquetes, encomiendas y cargas de Rosario a Mar del Plata con salidas los ${itinerarioDirecto.diasSalida.join(' y ')}. Pedí una cotización y consultá por retiro o entrega a domicilio.`,
+    tituloSeo: `Encomiendas y cargas generales de Rosario a Mar del Plata | El Directo`,
+    descripcionSeo: `Enviá encomiendas y cargas generales de Rosario a Mar del Plata con salidas los ${itinerarioDirecto.diasSalida.join(' y ')}. Consultá por retiro, entrega o equipo completo.`,
   },
 ];
 
@@ -144,13 +144,11 @@ export const redespachosPorSucursal = [
       'Córdoba',
       'La Pampa',
       'Bahía Blanca',
-      'Bariloche',
-      'San Martín de los Andes',
     ],
   },
   {
     sucursal: sucursales[1],
-    destinos: ['Tandil', 'Balcarce', 'Miramar', 'Necochea', 'Otamendi', 'Pinamar', 'Villa Gesell', 'Mar de Ajó', 'San Clemente del Tuyú'],
+    destinos: ['Costa Atlántica bonaerense', 'Balcarce', 'Miramar', 'Necochea', 'Otamendi', 'Pinamar', 'Mar de Ajó', 'San Clemente del Tuyú'],
   },
 ];
 
@@ -161,6 +159,16 @@ export const ciudadesRedespacho = redespachosPorSucursal.flatMap(
 export const ciudadesDirecto = ['Rosario', 'Mar del Plata'];
 
 export const servicios = [
+  {
+    nombre: 'Equipo completo',
+    descripcion:
+      '¿Necesitás transportar una carga de gran volumen? Consultanos por un vehículo completo para mercadería, maquinaria y cargas empresariales. Evaluamos dimensiones, peso y requisitos antes de coordinar el traslado.',
+  },
+  {
+    nombre: 'Cargas generales',
+    descripcion:
+      'Transportamos mercadería paletizada, muebles, equipamiento comercial y cargas de mayor volumen. Atendemos consultas de fábricas, comercios y distribuidores según las características de cada operación.',
+  },
   {
     nombre: 'Encomiendas y paquetería',
     descripcion:
@@ -177,16 +185,19 @@ export const servicios = [
       'Transportamos autos, motos, bicicletas y cuatriciclos. Antes de enviarlo, consultanos cómo preparar tu vehículo y qué opciones hay para retirarlo y entregarlo.',
   },
   {
-    nombre: 'Redespachos',
+    nombre: 'Redespachos y conexiones con otros destinos',
     descripcion:
-      'Si tu envío va más allá de Rosario o Mar del Plata, podemos consultar un redespacho desde nuestras sucursales. Decinos el destino para confirmar si está disponible y cuánto puede demorar.',
+      'Si el destino no aparece en el recorrido habitual, consultanos. Evaluamos opciones de conexión desde nuestras sucursales según el tipo de carga, su volumen, el destino y la disponibilidad.',
   },
 ];
 
 export const tiposDeCarga = [
-  'Cajas y bultos sueltos',
-  'Carga general',
   'Mercadería paletizada',
+  'Equipamiento comercial',
+  'Maquinaria industrial y equipamiento para empresas',
+  'Repuestos e implementos para maquinaria agrícola',
+  'Alimentos envasados sin refrigeración (sujetos a consulta)',
+  'Cajas y bultos sueltos',
   'Línea blanca (heladeras, cocinas, lavarropas)',
   'Equipos gastronómicos',
   'Muebles',
@@ -194,8 +205,8 @@ export const tiposDeCarga = [
 
 export const preguntasFrecuentes = [
   {
-    pregunta: '¿Qué días salen los envíos entre Rosario y Mar del Plata?',
-    respuesta: `Los camiones salen los ${itinerarioDirecto.diasSalida.join(' y ')} desde ambas ciudades. El arribo a la sucursal de destino está previsto ${itinerarioDirecto.arriboPrevisto.referencia} a las ${itinerarioDirecto.arriboPrevisto.hora}. Antes de acercarte a retirar la carga o coordinar una entrega, consultanos para confirmar que esté disponible.`,
+    pregunta: '¿Qué días salen los camiones?',
+    respuesta: `Los camiones salen los ${itinerarioDirecto.diasSalida.join(' y ')} desde ambas ciudades. El arribo a la sucursal de destino está previsto para ${itinerarioDirecto.arriboPrevisto.referencia}. Antes de acercarte a retirar una carga o coordinar una entrega, consultanos para confirmar su disponibilidad.`,
   },
   {
     pregunta: '¿Cómo puedo despachar una encomienda?',
@@ -208,23 +219,39 @@ export const preguntasFrecuentes = [
       'Decinos qué tipo de carga querés enviar, cuántos bultos son y sus medidas y peso aproximados. También necesitamos las ciudades de origen y destino. Si necesitás retiro o entrega a domicilio, pasanos las direcciones para consultar esa opción y cotizarla.',
   },
   {
-    pregunta: '¿Pueden retirar o entregar la carga a domicilio?',
+    pregunta: '¿Realizan retiros o entregas a domicilio?',
     respuesta:
       'Sí, podemos coordinar un retiro en origen o una entrega en destino según la dirección, el tipo de carga y la disponibilidad. Pasanos los domicilios para consultar esta opción al cotizar.',
   },
   {
-    pregunta: '¿Qué tipos de carga transportan?',
+    pregunta: '¿Qué cargas pueden transportar?',
     respuesta:
-      'Transportamos cajas, encomiendas, carga general, mercadería paletizada, muebles, electrodomésticos y equipos gastronómicos. Si lo que querés enviar es grande o frágil, consultanos cómo prepararlo antes de llevarlo a la sucursal.',
+      'Transportamos cargas generales y encomiendas: mercadería paletizada, cajas, muebles, electrodomésticos y equipamiento comercial. También podemos trasladar maquinaria industrial, repuestos e implementos para maquinaria agrícola y cargas de mayor volumen, según sus dimensiones, peso y requisitos.',
   },
   {
-    pregunta: '¿Hacen mudanzas o transportan autos y motos?',
+    pregunta: '¿Transportan autos, motos y bicicletas?',
     respuesta:
-      'Sí, podemos organizar mudanzas y transportar autos, motos, bicicletas y cuatriciclos entre Rosario y Mar del Plata. Contanos qué necesitás trasladar para consultar el espacio disponible, cómo prepararlo y las opciones de retiro y entrega.',
+      'Sí, transportamos autos, motos, bicicletas y cuatriciclos. Contanos qué necesitás trasladar para consultar el espacio disponible, cómo prepararlo y las opciones de retiro y entrega.',
   },
   {
-    pregunta: '¿Hacen envíos a otras localidades?',
-    respuesta: `Sí, podemos coordinar redespachos desde nuestras sucursales a localidades como ${[...ciudadesRedespacho.slice(0, 2), ciudadesRedespacho[4], ...ciudadesRedespacho.slice(-4)].join(', ')}. Decinos adónde va tu envío para confirmar la disponibilidad, el costo y el plazo.`,
+    pregunta: '¿Puedo solicitar un equipo completo?',
+    respuesta:
+      'Sí. Ofrecemos un equipo completo para mercadería, maquinaria y cargas empresariales de gran volumen. Para coordinarlo necesitamos conocer las dimensiones, el peso, el origen y el destino.',
+  },
+  {
+    pregunta: '¿Transportan maquinaria industrial?',
+    respuesta:
+      'Sí, transportamos maquinaria industrial y equipamiento para empresas, incluidos tornos. El traslado se coordina según las dimensiones, el peso y los requisitos de la carga.',
+  },
+  {
+    pregunta: '¿Puedo enviar alimentos?',
+    respuesta:
+      'Sí, podés enviar alimentos envasados. No contamos con equipos de frío, por lo que no transportamos alimentos refrigerados ni congelados.',
+  },
+  {
+    pregunta: '¿Realizan envíos a otros destinos?',
+    respuesta:
+      'Nuestro recorrido habitual conecta Rosario y Mar del Plata en ambos sentidos. Para otros destinos evaluamos alternativas según la mercadería, su volumen y el lugar de entrega; la disponibilidad, el costo y el plazo se confirman para cada operación.',
   },
   {
     pregunta: '¿Cuánto cuesta enviar una encomienda o carga?',
@@ -234,11 +261,11 @@ export const preguntasFrecuentes = [
   {
     pregunta: '¿La carga viaja asegurada?',
     respuesta:
-      'Sí, el servicio incluye seguro de carga. Antes de confirmar tu envío, consultanos qué condiciones y qué cobertura corresponden a tu mercadería.',
+      'Sí, el servicio incluye seguro de carga si no contás con seguro propio.',
   },
   {
-    pregunta: '¿Cómo tengo que embalar mi encomienda?',
+    pregunta: '¿Cómo tengo que embalar una encomienda?',
     respuesta:
-      'Prepará el bulto para que el contenido quede protegido durante el viaje. Usá una caja, film u otra protección adecuada y acolchá los objetos frágiles. Si no sabés cómo embalar algo, consultanos antes de acercarte a la sucursal.',
+      'Prepará el bulto para que el contenido quede protegido durante el viaje. Usá una caja, film u otra protección adecuada y protegé especialmente los objetos frágiles. Si no sabés cómo embalar algo, consultanos antes de acercarte a la sucursal.',
   },
 ];

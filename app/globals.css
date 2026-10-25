@@ -71,6 +71,22 @@
     padding-block: clamp(2rem, 6vh, 3rem);
   }
   .cabecera-ajustable--inicio .cabecera-ajustable__texto { padding-block: 0; }
+  .cabecera-ajustable--servicios .cabecera-ajustable__contenido {
+    min-height: max(31rem, calc(100svh - 84px - 7rem));
+  }
+  .cabecera-ajustable--servicios .cabecera-ajustable__texto {
+    padding-block: clamp(2rem, 5vh, 3.5rem);
+  }
+  .cabecera-ajustable--servicios .cabecera-ajustable__migas { margin-bottom: 1.5rem; }
+  .cabecera-ajustable--servicios .cabecera-ajustable__titulo {
+    font-size: clamp(2.5rem, 3.2vw, 3.75rem);
+    line-height: 1.06;
+  }
+  .cabecera-ajustable--servicios .cabecera-ajustable__descripcion {
+    margin-top: 1.25rem;
+    line-height: 1.5;
+  }
+  .cabecera-ajustable--servicios .cabecera-ajustable__acciones { margin-top: 1.5rem; }
 }
 
 @media (min-width: 1024px) and (max-height: 800px) {

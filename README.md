@@ -33,7 +33,7 @@ Configurá `NEXT_PUBLIC_SITE_URL` con la URL canónica. En producción debe coin
 - `src/lib/seo/` y `src/lib/geo.js`: metadata por ruta y datos estructurados.
 - `public/`: fotografías y logo originales.
 
-La ruta directa es Rosario ↔ Mar del Plata. Las demás localidades de `ciudadesRedespacho` requieren confirmar disponibilidad, costo y plazo; no deben presentarse como rutas directas.
+La ruta directa conecta Rosario y Mar del Plata en ambos sentidos. Las localidades de `ciudadesRedespacho` son referencias para consultas de redespacho, no paradas ni destinos del recorrido habitual. Cada operación requiere evaluar el tipo de mercadería, el volumen, el destino, la disponibilidad, el costo y el plazo. No se publica una hora exacta de arribo ni un año de fundación sin confirmar.
 
 ## SEO y datos estructurados
 

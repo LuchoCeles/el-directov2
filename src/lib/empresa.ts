@@ -61,7 +61,7 @@ export const descripcionSeo = descripcionSeoCruda;
 
 export interface ItinerarioDirecto {
   diasSalida: string[];
-  arriboPrevisto: { referencia: string; hora: string };
+  arriboPrevisto: { referencia: string };
 }
 
 export const itinerarioDirecto: ItinerarioDirecto = itinerarioDirectoCrudo;

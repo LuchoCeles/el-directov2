@@ -9,6 +9,6 @@ export const metadatosSeo: Metadata = {
     ruta: "",
     titulo: tituloSeo,
     descripcion: descripcionSeo,
-    imagenAlt: `Transporte de carga entre Rosario y Mar del Plata - ${empresa.nombre}`,
+    imagenAlt: `Encomiendas y cargas generales desde Rosario y Mar del Plata - ${empresa.nombre}`,
   }),
 };

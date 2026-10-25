@@ -139,8 +139,7 @@ export default function FormularioContacto() {
         </div>
         <div className="sm:col-span-2">
           <label htmlFor="mensaje" className={claseEtiqueta}>Mensaje *</label>
-          <textarea id="mensaje" name="mensaje" value={datosFormulario.mensaje} onChange={manejarCambio} placeholder="Por ejemplo: quiero enviar dos cajas de Rosario a Mar del Plata..." rows={5} required disabled={estaCargando} aria-invalid={Boolean(errores.mensaje)} aria-describedby={errores.mensaje ? "error-mensaje ayuda-mensaje" : "ayuda-mensaje"} className={`${claseCampo} min-h-36 resize-y`} />
-          <p id="ayuda-mensaje" className="mt-2 text-sm leading-6 text-[#42617F]">Incluí qué enviás, cantidad de bultos, medidas y peso aproximados, y ciudad de origen y destino. Si pedís retiro o entrega a domicilio, indicá también las direcciones. Podés contarnos lo que sepas, aunque todavía no tengas todos los datos.</p>
+          <textarea id="mensaje" name="mensaje" value={datosFormulario.mensaje} onChange={manejarCambio} placeholder="Quiero enviar 2 cajas (40 × 30 × 25 cm, 8 kg) desde Rosario hasta Mar del Plata. Necesito retiro en San Martín 123, Rosario." rows={5} required disabled={estaCargando} aria-invalid={Boolean(errores.mensaje)} aria-describedby={errores.mensaje ? "error-mensaje" : undefined} className={`${claseCampo} min-h-36 resize-y`} />
           {errores.mensaje && <p id="error-mensaje" role="alert" className={claseError}>{errores.mensaje}</p>}
         </div>
       </div>

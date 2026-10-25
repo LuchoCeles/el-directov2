@@ -44,8 +44,7 @@ export default function PaginaEmpresa() {
                 id="titulo-empresa"
                 className="cabecera-ajustable__titulo max-w-2xl font-heading text-[clamp(2.7rem,5vw,5rem)] font-semibold leading-[1.08] tracking-[-0.055em] lg:max-w-none lg:text-[clamp(2.8rem,4vw,4rem)]"
               >
-                Una empresa fundada en {empresa.añoFundacion} que hoy conecta
-                Rosario y Mar del Plata
+                {empresa.trayectoria}
               </h1>
               <p className="cabecera-ajustable__descripcion mt-7 max-w-xl text-base leading-8 text-[#365572] sm:text-lg lg:mt-5 lg:max-w-2xl lg:leading-7">
                 {empresa.descripcion}
@@ -121,8 +120,8 @@ export default function PaginaEmpresa() {
                   Un viaje directo entre sucursales
                 </h3>
                 <p className="mt-3 text-sm leading-7 text-[#42617F]">
-                  Tu carga viaja entre Rosario y Mar del Plata sin transbordo
-                  entre nuestras sucursales.
+                  Tu carga viaja de Rosario a Mar del Plata y de Mar del Plata
+                  a Rosario sin transbordo entre nuestras sucursales.
                 </p>
               </article>
               <article className="bg-white p-7 sm:p-9">
@@ -134,7 +133,7 @@ export default function PaginaEmpresa() {
                   Cargas de distintos tamaños
                 </h3>
                 <p className="mt-3 text-sm leading-7 text-[#42617F]">
-                  Llevamos encomiendas y carga general de distintos tamaños.
+                  Llevamos cargas generales y encomiendas de distintos tamaños.
                   Organizamos el traslado según las características de tu envío.
                 </p>
               </article>

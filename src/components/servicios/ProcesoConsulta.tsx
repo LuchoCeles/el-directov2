@@ -4,7 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 const pasos = [
   {
     titulo: "Describí la carga",
-    descripcion: "Contanos si vas a enviar cajas, muebles, mercadería, un vehículo u otra carga. Indicá sus medidas y peso aproximados, y el origen y destino.",
+    descripcion: "Contanos si vas a enviar cajas, pallets, maquinaria, un vehículo u otra carga. Si necesitás un equipo completo, indicalo junto con las medidas, el peso aproximado, el origen y el destino.",
   },
   {
     titulo: "Prepará el despacho",

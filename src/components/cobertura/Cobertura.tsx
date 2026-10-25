@@ -12,9 +12,9 @@ export default function Cobertura() {
         </div>
         <div className="flex items-center px-5 py-16 sm:px-10 sm:py-20 lg:px-[clamp(3rem,6vw,8rem)]">
           <div className="max-w-[610px]">
-            <p className="eyebrow">Destinos con redespacho</p>
+            <p className="eyebrow">Conexiones sujetas a consulta</p>
             <h2 id="titulo-cobertura" className="font-heading mt-5 text-4xl leading-[1.1] tracking-tight text-[#154677] sm:text-5xl">¿Tu envío va a otra localidad?</h2>
-            <p className="mt-6 text-base leading-8 text-[#3d5975]">Si tu carga sigue viaje después de Rosario o Mar del Plata, podemos consultar un redespacho desde la sucursal de llegada. Los destinos de referencia aparecen abajo. Escribinos con tu localidad exacta para confirmar disponibilidad, costo y plazo. Si el destino está en La Pampa o se llama Otamendi, indicanos la localidad precisa para consultar la cobertura.</p>
+            <p className="mt-6 text-base leading-8 text-[#3d5975]">Si el destino que buscás no aparece en nuestro recorrido habitual, consultanos. Podemos evaluar un redespacho o una alternativa según el tipo de mercadería, su volumen y el destino. Desde Mar del Plata podés consultar por cualquier localidad de la Costa Atlántica bonaerense. Los destinos y regiones de referencia de abajo no forman parte del trayecto directo: confirmaremos disponibilidad, costo y plazo para cada operación. Indicanos la localidad precisa, especialmente si tu destino está en La Pampa, en la Costa Atlántica o se llama Otamendi.</p>
             <div className="mt-8 space-y-8 border-t border-[#c7d9e9] pt-6">
               {redespachosPorSucursal.map(({ sucursal, destinos }) => (
                 <div key={sucursal.nombre}>

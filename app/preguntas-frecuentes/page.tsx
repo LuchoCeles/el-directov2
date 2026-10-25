@@ -20,7 +20,7 @@ export default function PaginaPreguntasFrecuentes() {
           <div className="mx-auto max-w-6xl">
             <nav
               aria-label="Ruta de navegación"
-              className="cabecera-ajustable__migas mb-14 text-xs font-semibold uppercase tracking-[0.16em] text-[#42617F]"
+              className="cabecera-ajustable__migas mb-12 text-xs font-semibold uppercase tracking-[0.16em] text-[#42617F]"
             >
               <ol className="flex flex-wrap items-center gap-2">
                 <li>
@@ -32,22 +32,22 @@ export default function PaginaPreguntasFrecuentes() {
                 <li aria-current="page">Preguntas frecuentes</li>
               </ol>
             </nav>
-            <div className="grid gap-8 lg:grid-cols-[1fr_0.75fr] lg:items-end lg:gap-20">
+            <div className="max-w-5xl">
               <div>
-                <p className="cabecera-ajustable__etiqueta mb-5 text-xs font-bold uppercase tracking-[0.2em] text-[#087CE5]">
+                <p className="cabecera-ajustable__etiqueta mb-4 text-xs font-bold uppercase tracking-[0.2em] text-[#087CE5]">
                   Información útil
                 </p>
                 <h1
                   id="titulo-preguntas"
-                  className="cabecera-ajustable__titulo font-heading text-[clamp(2.7rem,5vw,5rem)] font-semibold leading-[1.08] tracking-[-0.055em]"
+                  className="cabecera-ajustable__titulo font-heading text-[clamp(2.5rem,4vw,3.75rem)] font-semibold leading-[1.1] tracking-[-0.055em]"
                 >
-                  Preguntas frecuentes sobre envíos y cargas
+                  Preguntas frecuentes sobre encomiendas y cargas generales
                 </h1>
               </div>
-              <p className="cabecera-ajustable__descripcion max-w-lg text-base leading-8 text-[#365572] sm:text-lg">
+              <p className="cabecera-ajustable__descripcion mt-6 max-w-3xl text-base leading-8 text-[#365572] sm:text-lg">
                 Si vas a enviar desde Rosario o Mar del Plata, acá encontrás
-                respuestas sobre encomiendas, cargas, cotizaciones, retiros,
-                entregas y redespachos. Así podés preparar tu consulta con
+                respuestas sobre cargas generales, encomiendas, equipos completos,
+                cotizaciones, retiros, entregas y redespachos. Así podés preparar tu consulta con
                 la información que necesitamos.
               </p>
             </div>
