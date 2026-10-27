@@ -28,14 +28,14 @@ export const empresa = {
   trayectoria: 'Más de 60 años de trayectoria en el transporte de cargas',
   descripcion:
     'En Transporte El Directo llevamos encomiendas y cargas generales desde Rosario y Mar del Plata, en ambos sentidos. Consultanos por equipos completos, retiros, entregas a domicilio y conexiones con otros destinos.',
-  queHacemos: `Transportamos encomiendas y cargas generales desde nuestras sucursales de Rosario y Mar del Plata, en ambos sentidos y sin transbordos en el trayecto directo. Los camiones salen los ${itinerarioDirecto.diasSalida.join(' y ')} desde ambas ciudades y el arribo a destino está previsto para ${itinerarioDirecto.arriboPrevisto.referencia}. Trabajamos con cajas, mercadería paletizada, muebles y equipamiento comercial. Consultanos por equipos completos, maquinaria industrial, repuestos e implementos agrícolas y alimentos envasados sin refrigeración; evaluamos cada operación según la carga y sus requisitos. Si necesitás retirar la carga en origen, recibirla a domicilio o enviarla a otra localidad, contanos tu caso para consultar las opciones disponibles.`,
+  queHacemos: `Transportamos encomiendas y cargas generales desde nuestras sucursales de Rosario y Mar del Plata, en ambos sentidos y sin transbordos en el trayecto directo. Los camiones salen los ${itinerarioDirecto.diasSalida.join(' y ')} desde ambas ciudades y el arribo a destino está previsto para ${itinerarioDirecto.arriboPrevisto.referencia}. Trabajamos con cajas, mercadería paletizada, muebles y equipamiento comercial. Consultanos por equipos completos, maquinaria industrial, repuestos e implementos agrícolas y alimentos; evaluamos cada operación según la carga y sus requisitos. Si necesitás retirar la carga en origen, recibirla a domicilio o enviarla a otra localidad, contanos tu caso para consultar las opciones disponibles.`,
   quienesSomos: 'Somos una empresa argentina de transporte. Desde las sucursales de Rosario y Mar del Plata atendemos a personas, comercios y empresas, y organizamos cada traslado según la carga, el origen y el destino.',
 };
 
 export const metadatosPaginas = {
   servicios: {
     titulo: 'Equipos completos, cargas generales y encomiendas | El Directo',
-    descripcion: 'Consultanos por equipos completos, cargas generales, encomiendas, maquinaria industrial, repuestos agrícolas y alimentos envasados sin refrigeración desde Rosario y Mar del Plata.',
+    descripcion: 'Consultanos por equipos completos, cargas generales, encomiendas, maquinaria industrial, repuestos agrícolas y alimentos desde Rosario y Mar del Plata.',
     imagenAlt: 'Servicios de Transporte El Directo',
   },
   cobertura: {
@@ -55,7 +55,7 @@ export const metadatosPaginas = {
   },
   'preguntas-frecuentes': {
     titulo: `Preguntas sobre cargas generales y encomiendas | ${empresa.nombre}`,
-    descripcion: `Respondemos dudas sobre equipos completos, maquinaria industrial, alimentos envasados, seguros, embalaje y salidas desde Rosario y Mar del Plata.`,
+    descripcion: `Respondemos dudas sobre equipos completos, maquinaria industrial, alimentos, seguros, embalaje y salidas desde Rosario y Mar del Plata.`,
     imagenAlt: `Preguntas frecuentes de ${empresa.nombre}`,
   },
   contacto: {
@@ -142,7 +142,6 @@ export const redespachosPorSucursal = [
       'Sunchales',
       'San Cristóbal',
       'Córdoba',
-      'La Pampa',
       'Bahía Blanca',
     ],
   },
@@ -196,7 +195,7 @@ export const tiposDeCarga = [
   'Equipamiento comercial',
   'Maquinaria industrial y equipamiento para empresas',
   'Repuestos e implementos para maquinaria agrícola',
-  'Alimentos envasados sin refrigeración (sujetos a consulta)',
+  'Alimentos (sujetos a consulta)',
   'Cajas y bultos sueltos',
   'Línea blanca (heladeras, cocinas, lavarropas)',
   'Equipos gastronómicos',
@@ -244,9 +243,9 @@ export const preguntasFrecuentes = [
       'Sí, transportamos maquinaria industrial y equipamiento para empresas, incluidos tornos. El traslado se coordina según las dimensiones, el peso y los requisitos de la carga.',
   },
   {
-    pregunta: '¿Puedo enviar alimentos?',
+    pregunta: '¿Se pueden llevar alimentos?',
     respuesta:
-      'Sí, podés enviar alimentos envasados. No contamos con equipos de frío, por lo que no transportamos alimentos refrigerados ni congelados.',
+      'Sí, podemos transportar alimentos. Contanos qué productos querés enviar, en qué cantidad y cómo están embalados, además del origen y el destino. Con esos datos podemos revisar los requisitos de la carga y orientarte sobre el despacho.',
   },
   {
     pregunta: '¿Realizan envíos a otros destinos?',
@@ -256,7 +255,7 @@ export const preguntasFrecuentes = [
   {
     pregunta: '¿Cuánto cuesta enviar una encomienda o carga?',
     respuesta:
-      'El precio depende del tipo y la cantidad de carga, sus medidas y peso, y el origen y destino. El retiro, la entrega a domicilio o un redespacho también pueden influir. Podés pedirnos una cotización por WhatsApp o desde el formulario.',
+      'El precio depende del tipo de carga, la cantidad, las medidas, el peso, el origen y el destino. El retiro, la entrega a domicilio o un redespacho también pueden influir. Podés pedirnos una cotización por WhatsApp o desde el formulario.',
   },
   {
     pregunta: '¿La carga viaja asegurada?',

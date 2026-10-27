@@ -143,7 +143,7 @@ export default function DetalleRuta({ ruta, rutaOpuesta }: PropiedadesDetalleRut
                   Redespachos desde {ruta.destino.nombre}
                 </h2>
                 <p className="mt-5 text-base leading-8 text-[#365572]">
-                  Si tu carga sigue viaje desde {ruta.destino.nombre}, consultanos por un redespacho o una alternativa según el tipo de mercadería, su volumen y el destino. Los destinos y regiones de referencia de abajo no forman parte del recorrido directo y cada operación depende de disponibilidad, costo y plazo. {ruta.destino.nombre === "Rosario" ? "Si tu destino está en La Pampa, indicanos la localidad exacta para consultar la cobertura." : "Podés consultar por cualquier localidad de la Costa Atlántica bonaerense; indicá cuál necesitás, especialmente si tu destino se llama Otamendi."}
+                  Si tu carga sigue viaje desde {ruta.destino.nombre}, consultanos por un redespacho o una alternativa según el tipo de mercadería, su volumen y el destino. Los destinos y regiones de referencia de abajo no forman parte del recorrido directo y cada operación depende de disponibilidad, costo y plazo. {ruta.destino.nombre === "Rosario" ? "Si tu destino es Rafaela, consultanos por las opciones de redespacho disponibles." : "Podés consultar por cualquier localidad de la Costa Atlántica bonaerense; indicá cuál necesitás, especialmente si tu destino se llama Otamendi."}
                 </p>
               </div>
               <ul className="mt-10 grid gap-x-8 gap-y-3 border-t border-[#154677]/20 pt-7 sm:grid-cols-2 lg:grid-cols-3" aria-label={`Destinos y regiones de consulta desde ${ruta.destino.nombre}`}>
@@ -168,7 +168,7 @@ export default function DetalleRuta({ ruta, rutaOpuesta }: PropiedadesDetalleRut
           <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[minmax(0,0.7fr)_minmax(0,1.3fr)] lg:gap-24">
             <h2 id="tipos-carga-ruta" className="font-heading text-3xl font-semibold tracking-[-0.04em] text-[#154677] sm:text-4xl">Qué podés enviar en esta ruta</h2>
             <div>
-              <p className="text-base leading-8 text-[#365572]">Transportamos cargas generales: mercadería paletizada, muebles, equipamiento comercial y también cajas y encomiendas. Consultanos por maquinaria industrial, repuestos e implementos agrícolas o alimentos envasados sin refrigeración; la aceptación depende de las características y los requisitos de cada carga. También podés consultar por una mudanza o el traslado de vehículos.</p>
+              <p className="text-base leading-8 text-[#365572]">Transportamos cargas generales: mercadería paletizada, muebles, equipamiento comercial y también cajas y encomiendas. Consultanos por maquinaria industrial, repuestos e implementos agrícolas o alimentos; la aceptación depende de las características y los requisitos de cada carga. También podés consultar por una mudanza o el traslado de vehículos.</p>
               <ul className="mt-6 grid gap-x-8 gap-y-3 sm:grid-cols-2">
                 {tiposDeCarga.map((tipo) => (
                   <li key={tipo} className="border-t border-[#154677]/20 pt-3 text-sm leading-7 text-[#365572]">{tipo}</li>

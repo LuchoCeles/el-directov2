@@ -12,10 +12,10 @@ export default function PaginaCobertura() {
     <div className="min-h-screen bg-white text-[#154677]">
       <Header />
       <main>
-        <section className="cabecera-ajustable bg-[#EAF2FA]" aria-labelledby="titulo-pagina-cobertura">
-          <div className="cabecera-ajustable__contenido mx-auto grid max-w-[1600px] lg:min-h-[600px] lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)]">
-            <div className="cabecera-ajustable__texto flex flex-col justify-center px-5 pb-14 pt-8 sm:px-10 lg:px-16 lg:py-20 xl:px-24">
-              <nav aria-label="Ruta de navegación" className="cabecera-ajustable__migas mb-12 text-xs font-semibold uppercase tracking-[0.16em] text-[#365572]">
+        <section className="bg-[#EAF2FA]" aria-labelledby="titulo-pagina-cobertura">
+          <div className="mx-auto grid max-w-[1600px] lg:min-h-[min(600px,calc(100svh-84px-7rem))] lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)]">
+            <div className="flex flex-col justify-center px-5 pb-14 pt-8 sm:px-10 lg:px-16 lg:py-8 xl:px-20">
+              <nav aria-label="Ruta de navegación" className="mb-12 text-xs font-semibold uppercase tracking-[0.16em] text-[#365572] lg:mb-5">
                 <ol className="flex items-center gap-2">
                   <li><Link href="/" className="hover:text-[#087CE5] focus-visible:underline">Inicio</Link></li>
                   <li aria-hidden="true">/</li>
@@ -23,17 +23,17 @@ export default function PaginaCobertura() {
                 </ol>
               </nav>
               <p className="eyebrow">Rutas y destinos</p>
-              <h1 id="titulo-pagina-cobertura" className="cabecera-ajustable__titulo mt-5 max-w-2xl font-heading text-[clamp(2.5rem,5.5vw,5.2rem)] font-semibold leading-[1.07] tracking-[-0.055em]">
+              <h1 id="titulo-pagina-cobertura" className="mt-5 max-w-2xl font-heading text-[clamp(2.5rem,5.5vw,5.2rem)] font-semibold leading-[1.07] tracking-[-0.055em] lg:mt-3 lg:text-[clamp(2.75rem,3.2vw,3.75rem)]">
                 Envíos desde Rosario y Mar del Plata
               </h1>
-              <p className="cabecera-ajustable__descripcion mt-7 max-w-xl text-base leading-8 text-[#365572] sm:text-lg">
+              <p className="mt-7 max-w-xl text-base leading-8 text-[#365572] sm:text-lg lg:mt-4 lg:leading-relaxed">
                 {empresa.nombreCompleto} transporta encomiendas y cargas generales desde {ciudadesDirecto.join(" y ")}, en ambos sentidos, con viaje directo entre sus sucursales. Si buscás otro destino, consultanos para evaluar alternativas según la carga, su volumen y el destino.
               </p>
-              <Link href="#rutas-directas" className="cabecera-ajustable__acciones mt-9 inline-flex min-h-12 w-fit items-center gap-2 border-b border-[#087CE5] text-sm font-bold underline-offset-4 hover:text-[#087CE5] focus-visible:text-[#087CE5]">
+              <Link href="#rutas-directas" className="mt-9 inline-flex min-h-12 w-fit items-center gap-2 border-b border-[#087CE5] text-sm font-bold underline-offset-4 hover:text-[#087CE5] focus-visible:text-[#087CE5] lg:mt-5">
                 Ver rutas de ida y vuelta <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Link>
             </div>
-            <div className="cabecera-ajustable__imagen relative min-h-[320px] sm:min-h-[440px] lg:min-h-full">
+            <div className="relative min-h-[320px] sm:min-h-[440px] lg:min-h-full">
               <Image src="/CAMION_ENTRANDO_EN_MAR_DEL_PLATA.webp" alt="Camión de El Directo al ingresar a Mar del Plata" fill preload sizes="(max-width: 1023px) 100vw, 53vw" className="object-cover object-center" />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#0b3051]/80 to-transparent px-6 pb-7 pt-20 text-sm font-semibold text-white sm:px-10">
                 Consultá el trayecto y las conexiones disponibles

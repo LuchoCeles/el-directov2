@@ -12,13 +12,13 @@ export default function ResumenServicios() {
         </div>
         <div className="flex items-center px-5 py-16 sm:px-10 sm:py-20 lg:px-[clamp(3rem,6vw,8rem)]">
           <div className="max-w-[600px]">
-            <p className="eyebrow">Servicios de transporte</p>
+            <p className="eyebrow text-sm">Servicios de transporte</p>
             <h2 id="titulo-servicios-inicio" className="font-heading mt-5 text-4xl leading-[1.1] tracking-tight text-[#154677] sm:text-5xl">Cargas generales y equipos completos</h2>
-            <p className="mt-6 text-base leading-8 text-[#48647e]">Transportamos encomiendas y cargas generales desde Rosario y Mar del Plata, en ambos sentidos. Trabajamos con cajas, mercadería paletizada, muebles, equipamiento comercial y cargas de mayor volumen. Consultanos por la disponibilidad y las condiciones del servicio.</p>
+            <p className="mt-6 text-lg leading-8 text-[#48647e]">Transportamos encomiendas y cargas generales desde Rosario y Mar del Plata, en ambos sentidos. Trabajamos con cajas, mercadería paletizada, muebles, equipamiento comercial y cargas de mayor volumen. Consultanos por la disponibilidad y las condiciones del servicio.</p>
             <ul className="mt-8 grid gap-x-5 border-t border-[#d2e0ed] pt-5 sm:grid-cols-2">
-              {servicios.map((servicio) => <li key={servicio.nombre} className="border-b border-[#d2e0ed] py-3 text-sm font-bold text-[#154677]">{servicio.nombre}</li>)}
+              {servicios.map((servicio) => <li key={servicio.nombre} className="border-b border-[#d2e0ed] py-3 text-base font-bold text-[#154677]">{servicio.nombre}</li>)}
             </ul>
-            <Link href="/servicios" className="mt-7 inline-flex min-h-11 items-center gap-2 border-b border-[#087ce5] text-sm font-bold text-[#154677] hover:text-[#087ce5]">Conocer servicios y tipos de carga <ArrowUpRight size={17} aria-hidden="true" /></Link>
+            <Link href="/servicios" className="mt-7 inline-flex min-h-11 items-center gap-2 border-b border-[#087ce5] text-base font-bold text-[#154677] hover:text-[#087ce5]">Conocer servicios y tipos de carga <ArrowUpRight size={18} aria-hidden="true" /></Link>
           </div>
         </div>
       </div>

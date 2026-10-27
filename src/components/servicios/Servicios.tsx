@@ -10,7 +10,7 @@ const Servicios = () => {
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-7 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.4fr)] lg:gap-20">
           <div>
-            <p className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-[#154677]">
+            <p className="mb-5 text-sm font-semibold uppercase tracking-[0.2em] text-[#154677]">
               Servicios
             </p>
             <h2
@@ -20,7 +20,7 @@ const Servicios = () => {
               Servicios para cada tipo de carga
             </h2>
           </div>
-          <p className="max-w-2xl self-end text-base leading-7 text-[#154677]/80 sm:text-lg sm:leading-8">
+          <p className="max-w-2xl self-end text-lg leading-8 text-[#154677]/80 sm:text-xl sm:leading-9">
             Desde una encomienda hasta mercadería paletizada o una carga completa. También podés consultar por retiros, entregas a domicilio y conexiones con otros destinos, según disponibilidad.
           </p>
         </div>
@@ -53,7 +53,7 @@ const Servicios = () => {
           <div>
             <h3 className="font-heading text-2xl leading-tight text-[#154677] sm:text-3xl">Qué transportamos</h3>
             <p className="mt-5 max-w-md text-sm leading-7 text-[#154677]/80 sm:text-base">Cargas generales como cajas, pallets, muebles y equipamiento comercial, además de maquinaria industrial y componentes para maquinaria agrícola. Contanos dimensiones, peso y requisitos para coordinar el traslado.</p>
-            <p className="mt-4 max-w-md text-sm leading-7 text-[#154677]/80 sm:text-base">Consultanos por alimentos envasados que no requieran refrigeración. Su aceptación depende del tipo de producto, el embalaje y los requisitos correspondientes.</p>
+            <p className="mt-4 max-w-md text-sm leading-7 text-[#154677]/80 sm:text-base">También transportamos alimentos. Contanos qué productos necesitás enviar y cómo están embalados para consultar los requisitos y coordinar el despacho.</p>
           </div>
           <ul className="grid gap-x-8 gap-y-3 sm:grid-cols-2">
             {tiposDeCarga.map((tipo) => (
