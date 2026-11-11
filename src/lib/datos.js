@@ -28,8 +28,8 @@ export const empresa = {
   trayectoria: 'Más de 60 años de trayectoria en el transporte de cargas',
   descripcion:
     'En Transporte El Directo llevamos encomiendas y cargas generales desde Rosario y Mar del Plata, en ambos sentidos. Consultanos por equipos completos, retiros, entregas a domicilio y conexiones con otros destinos.',
-  queHacemos: `Transportamos encomiendas y cargas generales desde nuestras sucursales de Rosario y Mar del Plata, en ambos sentidos y sin transbordos en el trayecto directo. Los camiones salen los ${itinerarioDirecto.diasSalida.join(' y ')} desde ambas ciudades y el arribo a destino está previsto para ${itinerarioDirecto.arriboPrevisto.referencia}. Trabajamos con cajas, mercadería paletizada, muebles y equipamiento comercial. Consultanos por equipos completos, maquinaria industrial, repuestos e implementos agrícolas y alimentos; evaluamos cada operación según la carga y sus requisitos. Si necesitás retirar la carga en origen, recibirla a domicilio o enviarla a otra localidad, contanos tu caso para consultar las opciones disponibles.`,
-  quienesSomos: 'Somos una empresa argentina de transporte. Desde las sucursales de Rosario y Mar del Plata atendemos a personas, comercios y empresas, y organizamos cada traslado según la carga, el origen y el destino.',
+  queHacemos: `Transportamos encomiendas y cargas generales desde nuestras sucursales de Rosario y Mar del Plata, en ambos sentidos y sin transbordos en el trayecto. Los camiones salen los ${itinerarioDirecto.diasSalida.join(' y ')} desde ambas ciudades y el arribo a destino está previsto para ${itinerarioDirecto.arriboPrevisto.referencia}. Trabajamos con cajas, mercadería paletizada, muebles y equipamiento comercial. Consultanos por equipos completos, maquinaria industrial, repuestos e implementos agrícolas y alimentos; evaluamos cada operación según la carga y sus requisitos. Si necesitás retirar la carga en origen, recibirla a domicilio o enviarla a otra localidad, contanos tu caso para consultar las opciones disponibles.`,
+  quienesSomos: 'Somos una empresa argentina de transporte. Desde las sucursales de Rosario y Mar del Plata atendemos a personas, comercios y empresas, organizamos cada traslado según la carga, el origen y el destino.',
 };
 
 export const metadatosPaginas = {
@@ -240,17 +240,17 @@ export const preguntasFrecuentes = [
   {
     pregunta: '¿Transportan maquinaria industrial?',
     respuesta:
-      'Sí, transportamos maquinaria industrial y equipamiento para empresas, incluidos tornos. El traslado se coordina según las dimensiones, el peso y los requisitos de la carga.',
+      'Sí, transportamos maquinaria industrial y equipamiento para empresas, por ejemplo: tornos, cámaras frigoríficas, hornos rotativos, amasadoras, entre otros equipos. El traslado se coordina según las dimensiones, el peso y los requisitos de la carga.',
   },
   {
     pregunta: '¿Se pueden llevar alimentos?',
     respuesta:
-      'Sí, podemos transportar alimentos. Contanos qué productos querés enviar, en qué cantidad y cómo están embalados, además del origen y el destino. Con esos datos podemos revisar los requisitos de la carga y orientarte sobre el despacho.',
+      'Sí, podemos transportar alimentos y contamos con habilitación de SENASA. Contanos qué productos querés enviar, en qué cantidad y cómo están embalados, además del origen y el destino. Con esos datos podemos revisar los requisitos de la carga y orientarte sobre el despacho.',
   },
   {
     pregunta: '¿Realizan envíos a otros destinos?',
     respuesta:
-      'Nuestro recorrido habitual conecta Rosario y Mar del Plata en ambos sentidos. Para otros destinos evaluamos alternativas según la mercadería, su volumen y el lugar de entrega; la disponibilidad, el costo y el plazo se confirman para cada operación.',
+      'Sí, contamos con redespachos a todas las localidades cercanas a nuestras sucursales. Evaluamos cada operación según la mercadería, su volumen y el lugar de entrega; la disponibilidad, el costo y el plazo se confirman para cada caso.',
   },
   {
     pregunta: '¿Cuánto cuesta enviar una encomienda o carga?',

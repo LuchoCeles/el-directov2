@@ -34,7 +34,7 @@ export default function PaginaEmpresa() {
                 id="quienes-somos"
                 className="font-heading text-3xl font-semibold leading-tight tracking-[-0.04em] sm:text-4xl"
               >
-                Transporte de cargas para personas, comercios y empresas
+                Transporte de cargas para particulares, comercios y empresas
               </h2>
             </div>
             <div className="border-t border-[#C9DCEB] pt-7">
