@@ -161,7 +161,7 @@ export const servicios = [
   {
     nombre: 'Equipo completo',
     descripcion:
-      '¿Necesitás transportar una carga de gran volumen? Consultanos por un vehículo completo para mercadería, maquinaria y cargas empresariales. Evaluamos dimensiones, peso y requisitos antes de coordinar el traslado.',
+      '¿Necesitás transportar una carga de gran volumen? Consultanos por un equipo completo para mercadería paletizada, maquinarias y cargas especiales. Evaluamos dimensiones, peso y requisitos antes de coordinar el traslado.',
   },
   {
     nombre: 'Cargas generales',
@@ -176,7 +176,7 @@ export const servicios = [
   {
     nombre: 'Mudanzas',
     descripcion:
-      'Te ayudamos a organizar la mudanza de tu casa u oficina. Contanos qué necesitás llevar y adónde va para coordinar el espacio y las opciones de retiro y entrega.',
+      'Transportamos mudanzas de casas, oficinas y negocios. Contanos qué necesitás llevar y adónde va para coordinar el espacio y las opciones de retiro y entrega.',
   },
   {
     nombre: 'Transporte de vehículos',
@@ -235,7 +235,7 @@ export const preguntasFrecuentes = [
   {
     pregunta: '¿Puedo solicitar un equipo completo?',
     respuesta:
-      'Sí. Ofrecemos un equipo completo para mercadería, maquinaria y cargas empresariales de gran volumen. Para coordinarlo necesitamos conocer las dimensiones, el peso, el origen y el destino.',
+      'Sí. Ofrecemos un equipo completo para mercadería paletizada, maquinarias y cargas especiales. Para coordinarlo necesitamos conocer las dimensiones, el peso, el origen y el destino.',
   },
   {
     pregunta: '¿Transportan maquinaria industrial?',

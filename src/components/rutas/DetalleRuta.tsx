@@ -143,7 +143,7 @@ export default function DetalleRuta({ ruta, rutaOpuesta }: PropiedadesDetalleRut
                   Redespachos desde {ruta.destino.nombre}
                 </h2>
                 <p className="mt-5 text-base leading-8 text-[#365572]">
-                  Si tu carga sigue viaje desde {ruta.destino.nombre}, consultanos por un redespacho o una alternativa según el tipo de mercadería, su volumen y el destino. Los destinos y regiones de referencia de abajo no forman parte del recorrido directo y cada operación depende de disponibilidad, costo y plazo. {ruta.destino.nombre === "Rosario" ? "Si tu destino es Rafaela, consultanos por las opciones de redespacho disponibles." : "Podés consultar por cualquier localidad de la Costa Atlántica bonaerense; indicá cuál necesitás, especialmente si tu destino se llama Otamendi."}
+                  Si tu carga sigue viaje desde {ruta.destino.nombre}, consultanos por un redespacho o una alternativa según el tipo de mercadería, su volumen y el destino. Los destinos y regiones de referencia de abajo no forman parte del recorrido directo y cada operación depende de disponibilidad, costo y plazo. {ruta.destino.nombre === "Rosario" ? "Si tu destino es Rafaela, consultanos por las opciones de redespacho disponibles." : "Podés consultar por cualquier localidad de la Costa Atlántica bonaerense; indicá cuál necesitás."}
                 </p>
               </div>
               <ul className="mt-10 grid gap-x-8 gap-y-3 border-t border-[#154677]/20 pt-7 sm:grid-cols-2 lg:grid-cols-3" aria-label={`Destinos y regiones de consulta desde ${ruta.destino.nombre}`}>

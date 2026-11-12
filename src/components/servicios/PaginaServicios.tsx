@@ -57,7 +57,7 @@ export default function PaginaServicios() {
               <h2 id="titulo-rutas-servicios" className="mt-5 font-heading text-3xl font-semibold leading-tight tracking-[-0.04em] sm:text-4xl">Un trayecto directo en ambos sentidos</h2>
             </div>
             <div>
-              <p className="text-base leading-8 text-[#365572]">Para enviar de Rosario a Mar del Plata o de Mar del Plata a Rosario, elegí tu ruta y conocé las sucursales de origen y destino. Si la carga sigue viaje hacia otra localidad, consultanos por disponibilidad, costo y plazo del redespacho.</p>
+              <p className="text-base leading-8 text-[#365572]">Los camiones conectan Rosario y Mar del Plata en ambos sentidos, con salida y llegada en nuestras sucursales. Si la carga sigue viaje hacia otra localidad, consultanos por disponibilidad, costo y plazo del redespacho.</p>
               <div className="mt-7 grid gap-3 sm:grid-cols-2">
                 {rutasDirectas.map((ruta) => (
                   <Link key={ruta.slug} href={`/${ruta.slug}`} className="group flex min-h-16 items-center justify-between gap-4 border-t border-[#C9DCEB] py-4 text-sm font-bold text-[#154677] transition-colors hover:text-[#087CE5] focus-visible:text-[#087CE5]">

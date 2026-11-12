@@ -4,7 +4,7 @@ import { itinerarioDirecto } from "@/lib/empresa";
 const datos = [
   { titulo: "Viaje directo", texto: "La carga viaja entre nuestras dos sucursales sin transbordo.", Icono: ArrowLeftRight },
   { titulo: "Salidas desde ambas ciudades", texto: `Partimos los ${itinerarioDirecto.diasSalida.join(" y ")}.`, Icono: CalendarDays },
-  { titulo: "Seguro de carga", texto: "Incluido si no contás con seguro propio.", Icono: ShieldCheck },
+  { titulo: "Seguro de carga", texto: "Incluido si no contás con seguro propio. Las unidades cuentan con seguimiento satelital.", Icono: ShieldCheck },
 ];
 
 export default function FranjaValor() {
